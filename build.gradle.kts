@@ -52,6 +52,9 @@ dependencies {
     implementation("commons-io:commons-io:2.8.0")
     implementation("org.apache.commons:commons-lang3:3.9")
 
+    // pagehelper ----------------------------------------------------------------------------------
+    implementation("com.github.pagehelper:pagehelper-spring-boot-starter:1.3.0")
+
     // test ----------------------------------------------------------------------------------------
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("junit:junit:4.12")

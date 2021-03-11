@@ -33,7 +33,6 @@ class DataSourceConfig {
         hikariDs.username = username
         hikariDs.password = password
         hikariDs.driverClassName = driverClassName
-        hikariDs.schema = "daily"
         log.info("DataSource Config End")
         return hikariDs
     }
