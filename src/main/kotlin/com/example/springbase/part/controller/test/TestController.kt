@@ -1,6 +1,7 @@
 package com.example.springbase.part.controller.test
 
 import com.example.springbase.fwk.base.BaseController
+import com.example.springbase.part.dto.com.GetUserOut
 import com.example.springbase.part.dto.test.GetTestOut
 import com.example.springbase.part.dto.test.PostTestIn
 import com.example.springbase.part.service.test.TestService
@@ -21,7 +22,7 @@ class TestController : BaseController(){
 
     @GetMapping
     @ApiOperation("테스트 api")
-    fun testController() : GetTestOut {
+    fun testController() : GetUserOut {
         return service.testService()
     }
 

@@ -14,9 +14,9 @@ jasypt:
 
 spring:
   datasource:
-    url: ENC(SstFgAvHLcXyLaPtWXlekdNt8TZjQIgvrhl2SwUNkphEsnk6MNF547ZkHjfXAD1YNyq3xquwN14=)
-    username: ENC(S1eB7u0g7gSn9h6HwJMGeA==)
-    password: ENC(sHVSQ0Qwyvuh9d70r6kCwY9i7SyiCwJq)
+    url: ENC(0JytM9Gsbw2y+zHWSE8JCJGxEky33t7S6ZH310V0Vk7lWlx/jy0+GqIYVCuf38XC4oQKod+Xz2U=)
+    username: ENC(RHkX8zw7fnRidHnQFK77mw==)
+    password: ENC(SbbgrhOBE+9IggmZGzEjMu+VCjNvI7FW)
     driver-class-name: org.postgresql.Driver
     hikari:
       auto-commit: false

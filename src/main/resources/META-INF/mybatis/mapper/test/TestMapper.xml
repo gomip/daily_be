@@ -2,20 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.springbase.repo.mybatis.test.TestMapper">
-    <select id="selectTestOne" resultType="GetTestOut">
+    <select id="selectTestOne" resultType="GetUserOut">
         select /* selectTestOne @ test @ 테스트 단건 조회 */
-               id
-             , value
-          from ringfit.test_mst
+            user_id
+             , user_name
+             , email
+             , create_dt
+             , create_user_id
+             , update_dt
+             , update_user_id
+          from daily.com_user_mst
          limit 1
     </select>
-
-    <insert id="insertTestOne">
-        insert /* insertTestOne @ test @ post api 테스트 */
-          into ringfit.test_mst(id, value)
-        values (
-                  #{id}
-                , #{value}
-               )
-    </insert>
 </mapper>
