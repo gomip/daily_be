@@ -14,7 +14,7 @@ jasypt:
 
 spring:
   datasource:
-    url: ENC(Bg9Sj7R3o/3RG/zR1fdqe3y/bc7ElPHAgRVYMBFkyL3D9C8HIsF7AVMw0oxrSfVyf8PhgQYGH4Xvs5MySpN40zfXPTmB8lRUSsUWP38mi8qlx1ueb/P334Pm84lwUrv1)
+    url: ENC(SstFgAvHLcXyLaPtWXlekdNt8TZjQIgvrhl2SwUNkphEsnk6MNF547ZkHjfXAD1YNyq3xquwN14=)
     username: ENC(S1eB7u0g7gSn9h6HwJMGeA==)
     password: ENC(sHVSQ0Qwyvuh9d70r6kCwY9i7SyiCwJq)
     driver-class-name: org.postgresql.Driver
