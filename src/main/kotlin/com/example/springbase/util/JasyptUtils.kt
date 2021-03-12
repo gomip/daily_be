@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component
 import javax.annotation.PostConstruct
 
 /**
- * 21.01.05 | gomip | created
+ * 2021.01.05 | gomip | created
  */
 
 @Component

@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 /**
- * 21.01.05 | gomip | created
+ * 2021.01.05 | gomip | created
  */
 
 @Configuration

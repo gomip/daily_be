@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component
 import kotlin.system.measureTimeMillis
 
 /**
- * 21.01.03 | gomip | created
+ * 2021.01.03 | gomip | created
  * => 모든 Service에 대해 수행될 AOP
  */
 

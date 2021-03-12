@@ -22,6 +22,7 @@ spring:
       auto-commit: false
   profiles:
     active: local
+    include: oauth
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL95Dialect                                    # 플랫폼 지정
     open-in-view: false                                                                             # open-session-in-view 웹 요청이 완료될때 까지 동일한 EntityManager를 갖도록 해주는것을 막는다. -> 성능에 안좋다함
@@ -30,7 +31,6 @@ spring:
       format_sql: true                                                                              # 콘솔에 출력되는 jpa 실행 쿼리를 가독성 있게 표현
       ddl-auto: update
       # 초기화 전략 [none : 아무것도 수행 안함, create : SessionFactory가 시작될 때 기존테이블을 삭제 후 다시 생성, update : 변경된 스키마만 반영, validate: 엔티티와 테이블이 정상적으로 매핑 되었는지만 확인]
-
 logging:
   level:
     org:

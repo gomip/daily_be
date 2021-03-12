@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 
 /**
- * 21.01.05 | gomip | created
+ * 2021.01.05 | gomip | created
  */
 
 @RestController

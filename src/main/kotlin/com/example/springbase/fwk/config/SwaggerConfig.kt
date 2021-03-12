@@ -10,7 +10,7 @@ import springfox.documentation.spi.service.contexts.OperationContext
 import springfox.documentation.swagger.common.SwaggerPluginSupport
 
 /**
- * 21.01.11 | gomip | created
+ * 2021.01.11 | gomip | created
  * => codegen을 한 이후에 api 함수명 변경해주는 코드
  */
 

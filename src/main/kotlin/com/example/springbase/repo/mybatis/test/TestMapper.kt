@@ -6,7 +6,7 @@ import com.example.springbase.part.dto.test.PostTestIn
 import org.springframework.stereotype.Repository
 
 /**
- * 21.01.05 | gomip | created
+ * 2021.01.05 | gomip | created
  */
 
 @Repository

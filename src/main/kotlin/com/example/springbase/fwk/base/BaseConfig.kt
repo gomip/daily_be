@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement
 import org.springframework.web.servlet.config.annotation.*
 
 /**
- * 21.01.03 | gomip | created
+ * 2021.01.03 | gomip | created
  *
  * Cors
  * => 추가 http 헤더를 사용하여 한 출처에서 실행중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록
