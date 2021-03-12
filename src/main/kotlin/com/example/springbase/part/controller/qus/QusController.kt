@@ -23,7 +23,7 @@ class QusController : BaseController(){
 
     @GetMapping
     @ApiOperation("문제 조회")
-    fun getQusPaging(@RequestBody input: GetQusIn): Paging<GetQusOut> {
+    fun getQusPaging(input: GetQusIn): Paging<GetQusOut> {
         return service.selectQusPaging(input)
     }
 }
