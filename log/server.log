@@ -215,3 +215,1520 @@
 [11:17:50.485:INFO :SpringBaseApplication:41] Loaded Bean : 417
 [11:17:50.485:INFO :SpringBaseApplication:42] =============   Check Loaded Bean END =============
 [11:17:50.485:INFO :SpringBaseApplication:44] =============             AppMain End ============= : 5460 ms
+[11:19:07.222:INFO :ThreadPoolTaskExecutor:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[11:19:11.068:INFO :SpringBaseApplication$Companion:55] Starting SpringBaseApplication.Companion using Java 15.0.1 on junghoon.local with PID 16164 (/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[11:19:11.070:DEBUG:SpringBaseApplication$Companion:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[11:19:11.070:INFO :SpringBaseApplication$Companion:664] The following profiles are active: local,oauth
+[11:19:12.275:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[11:19:12.293:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[11:19:12.295:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[11:19:12.295:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[11:19:12.296:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[11:19:12.296:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[11:19:12.296:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[11:19:12.297:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application-oauth.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[11:19:12.297:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[11:19:12.336:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[11:19:12.785:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 5001 (http)
+[11:19:12.793:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-5001"]
+[11:19:12.793:INFO :StandardService:173] Starting service [Tomcat]
+[11:19:12.793:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[11:19:12.891:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[11:19:12.891:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 1767 ms
+[11:19:12.950:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[11:19:12.973:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[11:19:12.975:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[11:19:13.012:INFO :JasyptConfig:26] =============     Jasypt Config Start =============
+[11:19:13.018:INFO :JasyptConfig:38] =============       Jasypt Config End =============
+[11:19:13.021:INFO :DefaultLazyEncryptor:32] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@667797f with name: encryptorBean
+[11:19:13.063:INFO :DataSourceConfig:30] DataSource Config Start
+[11:19:13.067:INFO :DataSourceConfig:36] DataSource Config End
+[11:19:13.097:INFO :MybatisConfig:40] ===== MybatisConfig Start =====
+[11:19:13.100:INFO :MybatisConfig:47] =====   MybatisConfig End =====
+[11:19:13.233:INFO :MybatisConfig:53] ===== sqlSessionTemplate Start =====
+[11:19:13.236:INFO :MybatisConfig:55] =====   sqlSessionTemplate End =====
+[11:19:13.687:INFO :JpaConfig:39] ===== EntityManagerFactory Start =====
+[11:19:13.718:DEBUG:logging:152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[11:19:14.924:INFO :LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[11:19:14.928:INFO :JpaConfig:58] =====   EntityManagerFactory End =====
+[11:19:14.945:INFO :JpaConfig:64] ===== TransactionManger Start =====
+[11:19:14.946:INFO :JpaConfig:66] =====   TransactionManger End =====
+[11:19:15.098:INFO :ThreadPoolTaskExecutor:181] Initializing ExecutorService 'applicationTaskExecutor'
+[11:19:15.514:INFO :DefaultSecurityFilterChain:51] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6de4071b, org.springframework.security.web.context.SecurityContextPersistenceFilter@36dc6b9, org.springframework.security.web.header.HeaderWriterFilter@315365ef, org.springframework.security.web.csrf.CsrfFilter@41c83af0, org.springframework.security.web.authentication.logout.LogoutFilter@3cf7433e, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1c24639e, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@4ac0fdc7, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@5c9168c3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@68cc6319, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7077ae9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16c1345b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7db70494, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fe3ebb3, org.springframework.security.oauth2.client.web.OAuth2AuthorizationCodeGrantFilter@727de450, org.springframework.security.web.session.SessionManagementFilter@5df7ae0a, org.springframework.security.web.access.ExceptionTranslationFilter@60739eca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69d2c460]
+[11:19:15.584:INFO :Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-5001"]
+[11:19:15.601:INFO :TomcatWebServer:220] Tomcat started on port(s): 5001 (http) with context path ''
+[11:19:15.877:DEBUG:Validator:24] ERROR [ModelSpecification.spec] At least one type of specification is required
+[11:19:15.894:INFO :SpringBaseApplication$Companion:61] Started SpringBaseApplication.Companion in 5.353 seconds (JVM running for 6.415)
+[11:19:15.899:INFO :SpringBaseApplication:34] =============     Check Profile START =============
+[11:19:15.899:INFO :SpringBaseApplication:36] local
+[11:19:15.899:INFO :SpringBaseApplication:36] oauth
+[11:19:15.899:INFO :SpringBaseApplication:37] =============       Check Profile End ============= : activate profile count: 2
+[11:19:15.899:INFO :SpringBaseApplication:40] ============= Check Loaded Bean START =============
+[11:19:15.900:INFO :SpringBaseApplication:41] Loaded Bean : 417
+[11:19:15.900:INFO :SpringBaseApplication:42] =============   Check Loaded Bean END =============
+[11:19:15.900:INFO :SpringBaseApplication:44] =============             AppMain End ============= : 5526 ms
+[11:21:38.869:INFO :JasyptUtilsTest:55] Starting JasyptUtilsTest using Java 15.0.1 on junghoon.local with PID 16413 (started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[11:21:38.871:DEBUG:JasyptUtilsTest:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[11:21:38.871:INFO :JasyptUtilsTest:664] The following profiles are active: local,oauth
+[11:21:40.058:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[11:21:40.078:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[11:21:40.080:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+[11:21:40.080:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+[11:21:40.081:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[11:21:40.081:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[11:21:40.081:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[11:21:40.082:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application-oauth.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[11:21:40.082:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[11:21:40.182:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[11:21:40.457:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[11:21:40.460:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[11:21:40.710:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 0 (http)
+[11:21:40.727:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-auto-1"]
+[11:21:40.728:INFO :StandardService:173] Starting service [Tomcat]
+[11:21:40.728:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[11:21:40.835:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[11:21:40.835:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 1934 ms
+[11:21:40.950:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[11:21:41.057:INFO :JasyptConfig:26] =============     Jasypt Config Start =============
+[11:21:41.065:INFO :JasyptConfig:38] =============       Jasypt Config End =============
+[11:21:41.069:INFO :DefaultLazyEncryptor:32] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@2705cb64 with name: encryptorBean
+[11:21:41.106:INFO :DataSourceConfig:30] DataSource Config Start
+[11:21:41.112:INFO :DataSourceConfig:36] DataSource Config End
+[11:21:41.154:INFO :MybatisConfig:40] ===== MybatisConfig Start =====
+[11:21:41.158:INFO :MybatisConfig:47] =====   MybatisConfig End =====
+[11:21:41.324:INFO :MybatisConfig:53] ===== sqlSessionTemplate Start =====
+[11:21:41.328:INFO :MybatisConfig:55] =====   sqlSessionTemplate End =====
+[11:21:41.968:INFO :JpaConfig:39] ===== EntityManagerFactory Start =====
+[11:21:42.009:DEBUG:logging:152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[11:21:43.380:INFO :LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[11:21:43.386:INFO :JpaConfig:58] =====   EntityManagerFactory End =====
+[11:21:43.409:INFO :JpaConfig:64] ===== TransactionManger Start =====
+[11:21:43.412:INFO :JpaConfig:66] =====   TransactionManger End =====
+[11:21:43.685:INFO :ThreadPoolTaskExecutor:181] Initializing ExecutorService 'applicationTaskExecutor'
+[11:21:44.320:INFO :DefaultSecurityFilterChain:51] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ab53d66, org.springframework.security.web.context.SecurityContextPersistenceFilter@4791ec36, org.springframework.security.web.header.HeaderWriterFilter@35ccfc57, org.springframework.security.web.csrf.CsrfFilter@32bf2b82, org.springframework.security.web.authentication.logout.LogoutFilter@23d19edb, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1c50797b, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@54fc7fa0, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@3f53e1f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5fe4bf4e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@57443d0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c74f5a7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f193dad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d73362f, org.springframework.security.oauth2.client.web.OAuth2AuthorizationCodeGrantFilter@55f3a49, org.springframework.security.web.session.SessionManagementFilter@40c0de4d, org.springframework.security.web.access.ExceptionTranslationFilter@bf6da82, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c6fc2d3]
+[11:21:44.446:INFO :Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-auto-1"]
+[11:21:44.458:INFO :TomcatWebServer:220] Tomcat started on port(s): 54287 (http) with context path ''
+[11:21:44.774:DEBUG:Validator:24] ERROR [ModelSpecification.spec] At least one type of specification is required
+[11:21:44.800:INFO :JasyptUtilsTest:61] Started JasyptUtilsTest in 6.556 seconds (JVM running for 7.669)
+[11:21:45.143:INFO :ThreadPoolTaskExecutor:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[11:22:01.063:INFO :ThreadPoolTaskExecutor:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[11:22:03.441:INFO :SpringBaseApplication$Companion:55] Starting SpringBaseApplication.Companion using Java 15.0.1 on junghoon.local with PID 16459 (/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[11:22:03.442:DEBUG:SpringBaseApplication$Companion:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[11:22:03.442:INFO :SpringBaseApplication$Companion:664] The following profiles are active: local,oauth
+[11:22:04.471:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[11:22:04.484:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[11:22:04.484:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[11:22:04.485:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[11:22:04.485:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[11:22:04.485:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[11:22:04.485:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[11:22:04.485:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application-oauth.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[11:22:04.486:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[11:22:04.514:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[11:22:04.865:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 5001 (http)
+[11:22:04.871:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-5001"]
+[11:22:04.872:INFO :StandardService:173] Starting service [Tomcat]
+[11:22:04.872:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[11:22:04.958:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[11:22:04.958:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 1484 ms
+[11:22:05.009:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[11:22:05.030:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[11:22:05.032:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[11:22:05.066:INFO :JasyptConfig:26] =============     Jasypt Config Start =============
+[11:22:05.071:INFO :JasyptConfig:38] =============       Jasypt Config End =============
+[11:22:05.073:INFO :DefaultLazyEncryptor:32] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@4ab66127 with name: encryptorBean
+[11:22:05.110:INFO :DataSourceConfig:30] DataSource Config Start
+[11:22:05.112:INFO :DataSourceConfig:36] DataSource Config End
+[11:22:05.139:INFO :MybatisConfig:40] ===== MybatisConfig Start =====
+[11:22:05.141:INFO :MybatisConfig:47] =====   MybatisConfig End =====
+[11:22:05.250:INFO :MybatisConfig:53] ===== sqlSessionTemplate Start =====
+[11:22:05.252:INFO :MybatisConfig:55] =====   sqlSessionTemplate End =====
+[11:22:05.620:INFO :JpaConfig:39] ===== EntityManagerFactory Start =====
+[11:22:05.643:DEBUG:logging:152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[11:22:06.847:INFO :LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[11:22:06.850:INFO :JpaConfig:58] =====   EntityManagerFactory End =====
+[11:22:06.866:INFO :JpaConfig:64] ===== TransactionManger Start =====
+[11:22:06.866:INFO :JpaConfig:66] =====   TransactionManger End =====
+[11:22:06.997:INFO :ThreadPoolTaskExecutor:181] Initializing ExecutorService 'applicationTaskExecutor'
+[11:22:07.366:INFO :DefaultSecurityFilterChain:51] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@748fa354, org.springframework.security.web.context.SecurityContextPersistenceFilter@544733a4, org.springframework.security.web.header.HeaderWriterFilter@20d92f1e, org.springframework.security.web.csrf.CsrfFilter@7db70494, org.springframework.security.web.authentication.logout.LogoutFilter@2dc77962, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@139b3a29, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@31daf094, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@62c1259f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@32bae609, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@78e59b04, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48d24d63, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34d0c331, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e6f1f48, org.springframework.security.oauth2.client.web.OAuth2AuthorizationCodeGrantFilter@33986be7, org.springframework.security.web.session.SessionManagementFilter@68cc6319, org.springframework.security.web.access.ExceptionTranslationFilter@5b160208, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b49b1df]
+[11:22:07.425:INFO :Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-5001"]
+[11:22:07.440:INFO :TomcatWebServer:220] Tomcat started on port(s): 5001 (http) with context path ''
+[11:22:07.695:DEBUG:Validator:24] ERROR [ModelSpecification.spec] At least one type of specification is required
+[11:22:07.711:INFO :SpringBaseApplication$Companion:61] Started SpringBaseApplication.Companion in 4.615 seconds (JVM running for 5.077)
+[11:22:07.714:INFO :SpringBaseApplication:34] =============     Check Profile START =============
+[11:22:07.714:INFO :SpringBaseApplication:36] local
+[11:22:07.715:INFO :SpringBaseApplication:36] oauth
+[11:22:07.715:INFO :SpringBaseApplication:37] =============       Check Profile End ============= : activate profile count: 2
+[11:22:07.715:INFO :SpringBaseApplication:40] ============= Check Loaded Bean START =============
+[11:22:07.715:INFO :SpringBaseApplication:41] Loaded Bean : 417
+[11:22:07.715:INFO :SpringBaseApplication:42] =============   Check Loaded Bean END =============
+[11:22:07.715:INFO :SpringBaseApplication:44] =============             AppMain End ============= : 4708 ms
+[11:30:56.022:INFO :ThreadPoolTaskExecutor:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[11:31:01.968:INFO :SpringBaseApplication$Companion:55] Starting SpringBaseApplication.Companion using Java 15.0.1 on junghoon.local with PID 18963 (/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[11:31:01.970:DEBUG:SpringBaseApplication$Companion:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[11:31:01.971:INFO :SpringBaseApplication$Companion:664] The following profiles are active: local,oauth
+[11:31:03.618:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[11:31:03.638:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[11:31:03.640:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[11:31:03.640:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[11:31:03.640:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[11:31:03.641:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[11:31:03.641:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[11:31:03.641:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application-oauth.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[11:31:03.641:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[11:31:03.686:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[11:31:04.140:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 5001 (http)
+[11:31:04.148:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-5001"]
+[11:31:04.149:INFO :StandardService:173] Starting service [Tomcat]
+[11:31:04.149:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[11:31:04.297:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[11:31:04.298:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 2266 ms
+[11:31:04.388:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[11:31:04.416:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[11:31:04.418:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[11:31:04.472:INFO :JasyptConfig:26] =============     Jasypt Config Start =============
+[11:31:04.479:INFO :JasyptConfig:38] =============       Jasypt Config End =============
+[11:31:04.482:INFO :DefaultLazyEncryptor:32] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@37c2f0b4 with name: encryptorBean
+[11:31:04.529:INFO :DataSourceConfig:30] DataSource Config Start
+[11:31:04.533:INFO :DataSourceConfig:36] DataSource Config End
+[11:31:04.570:INFO :MybatisConfig:40] ===== MybatisConfig Start =====
+[11:31:04.574:INFO :MybatisConfig:47] =====   MybatisConfig End =====
+[11:31:04.744:INFO :MybatisConfig:53] ===== sqlSessionTemplate Start =====
+[11:31:04.748:INFO :MybatisConfig:55] =====   sqlSessionTemplate End =====
+[11:31:05.458:INFO :JpaConfig:39] ===== EntityManagerFactory Start =====
+[11:31:05.488:DEBUG:logging:152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[11:31:08.251:INFO :LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[11:31:08.255:INFO :JpaConfig:58] =====   EntityManagerFactory End =====
+[11:31:08.273:INFO :JpaConfig:64] ===== TransactionManger Start =====
+[11:31:08.273:INFO :JpaConfig:66] =====   TransactionManger End =====
+[11:31:08.438:INFO :ThreadPoolTaskExecutor:181] Initializing ExecutorService 'applicationTaskExecutor'
+[11:31:08.827:INFO :DefaultSecurityFilterChain:51] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6de4071b, org.springframework.security.web.context.SecurityContextPersistenceFilter@36dc6b9, org.springframework.security.web.header.HeaderWriterFilter@315365ef, org.springframework.security.web.csrf.CsrfFilter@41c83af0, org.springframework.security.web.authentication.logout.LogoutFilter@3cf7433e, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1c24639e, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@4ac0fdc7, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@5c9168c3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@68cc6319, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7077ae9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16c1345b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7db70494, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fe3ebb3, org.springframework.security.oauth2.client.web.OAuth2AuthorizationCodeGrantFilter@727de450, org.springframework.security.web.session.SessionManagementFilter@5df7ae0a, org.springframework.security.web.access.ExceptionTranslationFilter@60739eca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69d2c460]
+[11:31:08.895:INFO :Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-5001"]
+[11:31:08.912:INFO :TomcatWebServer:220] Tomcat started on port(s): 5001 (http) with context path ''
+[11:31:09.185:DEBUG:Validator:24] ERROR [ModelSpecification.spec] At least one type of specification is required
+[11:31:09.203:INFO :SpringBaseApplication$Companion:61] Started SpringBaseApplication.Companion in 7.81 seconds (JVM running for 8.666)
+[11:31:09.208:INFO :SpringBaseApplication:36] =============     Check Profile START =============
+[11:31:09.208:INFO :SpringBaseApplication:38] local
+[11:31:09.208:INFO :SpringBaseApplication:38] oauth
+[11:31:09.208:INFO :SpringBaseApplication:39] =============       Check Profile End ============= : activate profile count: 2
+[11:31:09.208:INFO :SpringBaseApplication:42] ============= Check Loaded Bean START =============
+[11:31:09.209:INFO :SpringBaseApplication:43] Loaded Bean : 418
+[11:31:09.209:INFO :SpringBaseApplication:44] =============   Check Loaded Bean END =============
+[11:31:09.209:INFO :SpringBaseApplication:46] =============             AppMain End ============= : 7931 ms
+[12:24:49.474:INFO :ThreadPoolTaskExecutor:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[12:32:23.556:INFO :SpringBaseApplication$Companion:55] Starting SpringBaseApplication.Companion using Java 15.0.1 on junghoon.local with PID 25149 (/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[12:32:23.558:DEBUG:SpringBaseApplication$Companion:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[12:32:23.558:INFO :SpringBaseApplication$Companion:664] The following profiles are active: local,oauth
+[12:32:25.338:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[12:32:25.357:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[12:32:25.358:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[12:32:25.358:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[12:32:25.359:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[12:32:25.359:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[12:32:25.359:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[12:32:25.360:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application-oauth.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[12:32:25.360:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[12:32:25.403:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[12:32:25.544:INFO :PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5438fa43' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[12:32:25.560:INFO :PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[12:32:25.914:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 5001 (http)
+[12:32:25.928:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-5001"]
+[12:32:25.929:INFO :StandardService:173] Starting service [Tomcat]
+[12:32:25.934:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[12:32:26.024:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[12:32:26.024:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 2402 ms
+[12:32:26.110:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[12:32:26.151:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[12:32:26.154:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[12:32:26.226:INFO :JasyptConfig:26] =============     Jasypt Config Start =============
+[12:32:26.234:INFO :JasyptConfig:38] =============       Jasypt Config End =============
+[12:32:26.237:INFO :DefaultLazyEncryptor:32] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@74eec640 with name: encryptorBean
+[12:32:26.394:INFO :DataSourceConfig:30] DataSource Config Start
+[12:32:26.398:INFO :DataSourceConfig:36] DataSource Config End
+[12:32:26.435:INFO :MybatisConfig:40] ===== MybatisConfig Start =====
+[12:32:26.438:INFO :MybatisConfig:47] =====   MybatisConfig End =====
+[12:32:26.620:INFO :MybatisConfig:53] ===== sqlSessionTemplate Start =====
+[12:32:26.624:INFO :MybatisConfig:55] =====   sqlSessionTemplate End =====
+[12:32:27.113:INFO :JpaConfig:39] ===== EntityManagerFactory Start =====
+[12:32:27.157:DEBUG:logging:152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[12:32:28.440:INFO :LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[12:32:28.444:INFO :JpaConfig:58] =====   EntityManagerFactory End =====
+[12:32:28.462:INFO :JpaConfig:64] ===== TransactionManger Start =====
+[12:32:28.463:INFO :JpaConfig:66] =====   TransactionManger End =====
+[12:32:28.519:WARN :AnnotationConfigServletWebServerApplicationContext:596] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'comUserMst' defined in com.example.springbase.repo.jpa.com.ComUserMst defined in @EnableJpaRepositories declared on JpaConfig: Cannot create inner bean '(inner bean)#3fdede3a' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#3fdede3a': Cannot resolve reference to bean 'entityMangerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityMangerFactory' available
+[12:32:28.653:INFO :StandardService:173] Stopping service [Tomcat]
+[12:32:28.678:ERROR:LoggingFailureAnalysisReporter:40] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean named 'entityMangerFactory' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'entityMangerFactory' in your configuration.
+
+[12:32:43.998:INFO :SpringBaseApplication$Companion:55] Starting SpringBaseApplication.Companion using Java 15.0.1 on junghoon.local with PID 25194 (/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[12:32:44.000:DEBUG:SpringBaseApplication$Companion:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[12:32:44.000:INFO :SpringBaseApplication$Companion:664] The following profiles are active: local,oauth
+[12:32:45.492:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[12:32:45.516:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[12:32:45.518:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[12:32:45.518:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[12:32:45.519:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[12:32:45.519:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[12:32:45.520:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[12:32:45.520:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application-oauth.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[12:32:45.520:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[12:32:45.577:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[12:32:45.722:INFO :PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6a567f7b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[12:32:45.749:INFO :PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[12:32:46.150:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 5001 (http)
+[12:32:46.159:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-5001"]
+[12:32:46.160:INFO :StandardService:173] Starting service [Tomcat]
+[12:32:46.161:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[12:32:46.283:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[12:32:46.283:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 2229 ms
+[12:32:46.382:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[12:32:46.417:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[12:32:46.420:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[12:32:46.515:INFO :JasyptConfig:26] =============     Jasypt Config Start =============
+[12:32:46.524:INFO :JasyptConfig:38] =============       Jasypt Config End =============
+[12:32:46.528:INFO :DefaultLazyEncryptor:32] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@67e6eb52 with name: encryptorBean
+[12:32:46.716:INFO :DataSourceConfig:30] DataSource Config Start
+[12:32:46.721:INFO :DataSourceConfig:36] DataSource Config End
+[12:32:46.766:INFO :MybatisConfig:40] ===== MybatisConfig Start =====
+[12:32:46.769:INFO :MybatisConfig:47] =====   MybatisConfig End =====
+[12:32:46.924:INFO :MybatisConfig:53] ===== sqlSessionTemplate Start =====
+[12:32:46.927:INFO :MybatisConfig:55] =====   sqlSessionTemplate End =====
+[12:32:47.427:INFO :JpaConfig:39] ===== EntityManagerFactory Start =====
+[12:32:47.463:DEBUG:logging:152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[12:32:48.767:INFO :LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[12:32:48.773:INFO :JpaConfig:58] =====   EntityManagerFactory End =====
+[12:32:48.805:INFO :JpaConfig:64] ===== TransactionManger Start =====
+[12:32:48.805:INFO :JpaConfig:66] =====   TransactionManger End =====
+[12:32:48.891:WARN :AnnotationConfigServletWebServerApplicationContext:596] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'comUserMstRepo' defined in com.example.springbase.repo.jpa.com.ComUserMstRepo defined in @EnableJpaRepositories declared on JpaConfig: Cannot create inner bean '(inner bean)#63af52a6' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#63af52a6': Cannot resolve reference to bean 'entityMangerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityMangerFactory' available
+[12:32:49.010:INFO :StandardService:173] Stopping service [Tomcat]
+[12:32:49.038:ERROR:LoggingFailureAnalysisReporter:40] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean named 'entityMangerFactory' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'entityMangerFactory' in your configuration.
+
+[12:32:57.332:INFO :SpringBaseApplication$Companion:55] Starting SpringBaseApplication.Companion using Java 15.0.1 on junghoon.local with PID 25230 (/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[12:32:57.333:DEBUG:SpringBaseApplication$Companion:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[12:32:57.334:INFO :SpringBaseApplication$Companion:664] The following profiles are active: local,oauth
+[12:32:58.983:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[12:32:59.004:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[12:32:59.006:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[12:32:59.006:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[12:32:59.007:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[12:32:59.007:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[12:32:59.007:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[12:32:59.007:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application-oauth.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[12:32:59.007:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[12:32:59.069:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[12:32:59.189:INFO :PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@437ed416' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[12:32:59.206:INFO :PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[12:32:59.576:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 5001 (http)
+[12:32:59.583:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-5001"]
+[12:32:59.584:INFO :StandardService:173] Starting service [Tomcat]
+[12:32:59.584:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[12:32:59.678:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[12:32:59.679:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 2263 ms
+[12:32:59.747:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[12:32:59.770:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[12:32:59.772:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[12:32:59.841:INFO :JasyptConfig:26] =============     Jasypt Config Start =============
+[12:32:59.849:INFO :JasyptConfig:38] =============       Jasypt Config End =============
+[12:32:59.852:INFO :DefaultLazyEncryptor:32] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@709d86a2 with name: encryptorBean
+[12:33:00.025:INFO :DataSourceConfig:30] DataSource Config Start
+[12:33:00.030:INFO :DataSourceConfig:36] DataSource Config End
+[12:33:00.068:INFO :MybatisConfig:40] ===== MybatisConfig Start =====
+[12:33:00.070:INFO :MybatisConfig:47] =====   MybatisConfig End =====
+[12:33:00.215:INFO :MybatisConfig:53] ===== sqlSessionTemplate Start =====
+[12:33:00.218:INFO :MybatisConfig:55] =====   sqlSessionTemplate End =====
+[12:33:00.668:INFO :JpaConfig:39] ===== EntityManagerFactory Start =====
+[12:33:00.699:DEBUG:logging:152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[12:33:01.963:INFO :LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[12:33:01.967:INFO :JpaConfig:58] =====   EntityManagerFactory End =====
+[12:33:01.987:INFO :JpaConfig:64] ===== TransactionManger Start =====
+[12:33:01.987:INFO :JpaConfig:66] =====   TransactionManger End =====
+[12:33:02.049:WARN :AnnotationConfigServletWebServerApplicationContext:596] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'comUserMstRepo' defined in com.example.springbase.repo.jpa.com.ComUserMstRepo defined in @EnableJpaRepositories declared on JpaConfig: Cannot create inner bean '(inner bean)#37b5a51c' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#37b5a51c': Cannot resolve reference to bean 'entityMangerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityMangerFactory' available
+[12:33:02.298:INFO :StandardService:173] Stopping service [Tomcat]
+[12:33:02.326:ERROR:LoggingFailureAnalysisReporter:40] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean named 'entityMangerFactory' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'entityMangerFactory' in your configuration.
+
+[12:37:15.073:INFO :SpringBaseApplication$Companion:55] Starting SpringBaseApplication.Companion using Java 15.0.1 on junghoon.local with PID 25662 (/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[12:37:15.074:DEBUG:SpringBaseApplication$Companion:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[12:37:15.075:INFO :SpringBaseApplication$Companion:664] The following profiles are active: local,oauth
+[12:37:16.230:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[12:37:16.248:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[12:37:16.250:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[12:37:16.250:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[12:37:16.250:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[12:37:16.250:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[12:37:16.251:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[12:37:16.251:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application-oauth.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[12:37:16.251:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[12:37:16.290:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[12:37:16.407:INFO :PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6af310c7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[12:37:16.417:INFO :PostProcessorRegistrationDelegate$BeanPostProcessorChecker:350] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[12:37:16.722:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 5001 (http)
+[12:37:16.741:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-5001"]
+[12:37:16.744:INFO :StandardService:173] Starting service [Tomcat]
+[12:37:16.744:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[12:37:16.828:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[12:37:16.828:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 1719 ms
+[12:37:16.894:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[12:37:16.918:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[12:37:16.920:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[12:37:16.986:INFO :JasyptConfig:26] =============     Jasypt Config Start =============
+[12:37:16.996:INFO :JasyptConfig:38] =============       Jasypt Config End =============
+[12:37:16.999:INFO :DefaultLazyEncryptor:32] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@36f6d25c with name: encryptorBean
+[12:37:17.124:INFO :DataSourceConfig:30] DataSource Config Start
+[12:37:17.128:INFO :DataSourceConfig:36] DataSource Config End
+[12:37:17.160:INFO :MybatisConfig:40] ===== MybatisConfig Start =====
+[12:37:17.163:INFO :MybatisConfig:47] =====   MybatisConfig End =====
+[12:37:17.292:INFO :MybatisConfig:53] ===== sqlSessionTemplate Start =====
+[12:37:17.295:INFO :MybatisConfig:55] =====   sqlSessionTemplate End =====
+[12:37:17.693:INFO :JpaConfig:39] ===== EntityManagerFactory Start =====
+[12:37:17.730:DEBUG:logging:152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[12:37:18.917:INFO :LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[12:37:18.920:INFO :JpaConfig:58] =====   EntityManagerFactory End =====
+[12:37:18.934:INFO :JpaConfig:64] ===== TransactionManger Start =====
+[12:37:18.934:INFO :JpaConfig:66] =====   TransactionManger End =====
+[12:37:19.097:INFO :DefaultSecurityFilterChain:51] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@193f3306, org.springframework.security.web.context.SecurityContextPersistenceFilter@37a939bc, org.springframework.security.web.header.HeaderWriterFilter@646c872a, org.springframework.security.web.csrf.CsrfFilter@c4455b4, org.springframework.security.web.authentication.logout.LogoutFilter@1e3a2177, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6ae6a77b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@44aa5585, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@537a8915, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7bb86ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@406decb2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33425171, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31aa9b01, org.springframework.security.web.session.SessionManagementFilter@7298c2d9, org.springframework.security.web.access.ExceptionTranslationFilter@22e1a1dc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@10230657]
+[12:37:19.266:INFO :ThreadPoolTaskExecutor:181] Initializing ExecutorService 'applicationTaskExecutor'
+[12:37:19.624:INFO :Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-5001"]
+[12:37:19.644:INFO :TomcatWebServer:220] Tomcat started on port(s): 5001 (http) with context path ''
+[12:37:19.907:DEBUG:Validator:24] ERROR [ModelSpecification.spec] At least one type of specification is required
+[12:37:19.924:INFO :SpringBaseApplication$Companion:61] Started SpringBaseApplication.Companion in 5.269 seconds (JVM running for 6.022)
+[12:37:19.930:INFO :SpringBaseApplication:33] =============     Check Profile START =============
+[12:37:19.930:INFO :SpringBaseApplication:35] local
+[12:37:19.930:INFO :SpringBaseApplication:35] oauth
+[12:37:19.930:INFO :SpringBaseApplication:36] =============       Check Profile End ============= : activate profile count: 2
+[12:37:19.930:INFO :SpringBaseApplication:39] ============= Check Loaded Bean START =============
+[12:37:19.931:INFO :SpringBaseApplication:40] Loaded Bean : 422
+[12:37:19.931:INFO :SpringBaseApplication:41] =============   Check Loaded Bean END =============
+[12:37:19.931:INFO :SpringBaseApplication:43] =============             AppMain End ============= : 5377 ms
+[15:47:57.643:INFO :ThreadPoolTaskExecutor:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[15:48:49.470:INFO :SpringBaseApplication$Companion:55] Starting SpringBaseApplication.Companion using Java 15.0.1 on junghoon.local with PID 43877 (/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[15:48:49.472:DEBUG:SpringBaseApplication$Companion:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[15:48:49.472:INFO :SpringBaseApplication$Companion:664] The following profiles are active: local,oauth
+[15:48:51.609:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[15:48:51.635:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[15:48:51.637:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[15:48:51.638:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[15:48:51.639:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[15:48:51.639:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[15:48:51.639:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[15:48:51.640:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application-oauth.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[15:48:51.640:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[15:48:51.689:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[15:48:52.269:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 5001 (http)
+[15:48:52.280:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-5001"]
+[15:48:52.281:INFO :StandardService:173] Starting service [Tomcat]
+[15:48:52.282:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[15:48:52.438:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[15:48:52.439:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 2880 ms
+[15:48:52.507:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[15:48:52.541:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[15:48:52.545:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[15:48:52.576:WARN :AnnotationConfigServletWebServerApplicationContext:596] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authService' defined in file [/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main/com/example/springbase/part/service/com/AuthService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.springbase.fwk.core.helper.KeyHelper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[15:48:52.579:INFO :StandardService:173] Stopping service [Tomcat]
+[15:48:52.617:ERROR:LoggingFailureAnalysisReporter:40] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.springbase.part.service.com.AuthService required a bean of type 'com.example.springbase.fwk.core.helper.KeyHelper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.example.springbase.fwk.core.helper.KeyHelper' in your configuration.
+
+[15:50:49.892:INFO :SpringBaseApplication$Companion:55] Starting SpringBaseApplication.Companion using Java 15.0.1 on junghoon.local with PID 44103 (/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[15:50:49.894:DEBUG:SpringBaseApplication$Companion:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[15:50:49.894:INFO :SpringBaseApplication$Companion:664] The following profiles are active: local,oauth
+[15:50:51.032:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[15:50:51.048:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[15:50:51.050:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[15:50:51.050:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[15:50:51.050:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[15:50:51.051:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[15:50:51.051:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[15:50:51.051:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application-oauth.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[15:50:51.051:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[15:50:51.083:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[15:50:51.501:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 5001 (http)
+[15:50:51.508:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-5001"]
+[15:50:51.508:INFO :StandardService:173] Starting service [Tomcat]
+[15:50:51.508:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[15:50:51.592:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[15:50:51.592:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 1647 ms
+[15:50:51.636:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[15:50:51.658:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[15:50:51.660:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[15:50:51.687:INFO :JasyptConfig:26] =============     Jasypt Config Start =============
+[15:50:51.693:INFO :JasyptConfig:38] =============       Jasypt Config End =============
+[15:50:51.695:INFO :DefaultLazyEncryptor:32] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@77ccded4 with name: encryptorBean
+[15:50:51.732:INFO :DataSourceConfig:30] DataSource Config Start
+[15:50:51.735:INFO :DataSourceConfig:36] DataSource Config End
+[15:50:51.763:INFO :MybatisConfig:40] ===== MybatisConfig Start =====
+[15:50:51.765:INFO :MybatisConfig:47] =====   MybatisConfig End =====
+[15:50:51.881:INFO :MybatisConfig:53] ===== sqlSessionTemplate Start =====
+[15:50:51.884:INFO :MybatisConfig:55] =====   sqlSessionTemplate End =====
+[15:50:52.253:INFO :JpaConfig:39] ===== EntityManagerFactory Start =====
+[15:50:52.286:DEBUG:logging:152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[15:50:53.418:INFO :LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:50:53.421:INFO :JpaConfig:58] =====   EntityManagerFactory End =====
+[15:50:53.433:INFO :JpaConfig:64] ===== TransactionManger Start =====
+[15:50:53.433:INFO :JpaConfig:66] =====   TransactionManger End =====
+[15:50:53.554:INFO :ThreadPoolTaskExecutor:181] Initializing ExecutorService 'applicationTaskExecutor'
+[15:50:53.924:INFO :Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-5001"]
+[15:50:53.945:INFO :TomcatWebServer:220] Tomcat started on port(s): 5001 (http) with context path ''
+[15:50:54.211:DEBUG:Validator:24] ERROR [ModelSpecification.spec] At least one type of specification is required
+[15:50:54.229:INFO :SpringBaseApplication$Companion:61] Started SpringBaseApplication.Companion in 4.743 seconds (JVM running for 5.332)
+[15:50:54.233:INFO :SpringBaseApplication:33] =============     Check Profile START =============
+[15:50:54.233:INFO :SpringBaseApplication:35] local
+[15:50:54.233:INFO :SpringBaseApplication:35] oauth
+[15:50:54.233:INFO :SpringBaseApplication:36] =============       Check Profile End ============= : activate profile count: 2
+[15:50:54.233:INFO :SpringBaseApplication:39] ============= Check Loaded Bean START =============
+[15:50:54.233:INFO :SpringBaseApplication:40] Loaded Bean : 386
+[15:50:54.234:INFO :SpringBaseApplication:41] =============   Check Loaded Bean END =============
+[15:50:54.234:INFO :SpringBaseApplication:43] =============             AppMain End ============= : 4857 ms
+[15:58:06.958:INFO :[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:58:06.959:INFO :DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+[15:58:06.961:INFO :DispatcherServlet:547] Completed initialization in 2 ms
+[15:58:11.678:INFO :ThreadPoolTaskExecutor:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[15:58:15.882:INFO :SpringBaseApplication$Companion:55] Starting SpringBaseApplication.Companion using Java 15.0.1 on junghoon.local with PID 45374 (/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[15:58:15.883:DEBUG:SpringBaseApplication$Companion:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[15:58:15.883:INFO :SpringBaseApplication$Companion:664] The following profiles are active: local,oauth
+[15:58:16.995:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[15:58:17.013:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[15:58:17.015:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[15:58:17.015:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[15:58:17.015:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[15:58:17.016:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[15:58:17.016:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[15:58:17.016:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application-oauth.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[15:58:17.016:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[15:58:17.049:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[15:58:17.476:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 5001 (http)
+[15:58:17.483:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-5001"]
+[15:58:17.484:INFO :StandardService:173] Starting service [Tomcat]
+[15:58:17.484:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[15:58:17.576:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[15:58:17.576:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 1653 ms
+[15:58:17.628:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[15:58:17.650:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[15:58:17.652:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[15:58:17.682:INFO :JasyptConfig:26] =============     Jasypt Config Start =============
+[15:58:17.689:INFO :JasyptConfig:38] =============       Jasypt Config End =============
+[15:58:17.692:INFO :DefaultLazyEncryptor:32] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@2de3b052 with name: encryptorBean
+[15:58:17.735:INFO :DataSourceConfig:30] DataSource Config Start
+[15:58:17.739:INFO :DataSourceConfig:36] DataSource Config End
+[15:58:17.774:INFO :MybatisConfig:40] ===== MybatisConfig Start =====
+[15:58:17.777:INFO :MybatisConfig:47] =====   MybatisConfig End =====
+[15:58:17.918:INFO :MybatisConfig:53] ===== sqlSessionTemplate Start =====
+[15:58:17.921:INFO :MybatisConfig:55] =====   sqlSessionTemplate End =====
+[15:58:18.418:INFO :JpaConfig:39] ===== EntityManagerFactory Start =====
+[15:58:18.446:DEBUG:logging:152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[15:58:19.589:INFO :LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:58:19.593:INFO :JpaConfig:58] =====   EntityManagerFactory End =====
+[15:58:19.607:INFO :JpaConfig:64] ===== TransactionManger Start =====
+[15:58:19.608:INFO :JpaConfig:66] =====   TransactionManger End =====
+[15:58:19.743:INFO :ThreadPoolTaskExecutor:181] Initializing ExecutorService 'applicationTaskExecutor'
+[15:58:20.113:INFO :Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-5001"]
+[15:58:20.130:INFO :TomcatWebServer:220] Tomcat started on port(s): 5001 (http) with context path ''
+[15:58:20.399:DEBUG:Validator:24] ERROR [ModelSpecification.spec] At least one type of specification is required
+[15:58:20.418:INFO :SpringBaseApplication$Companion:61] Started SpringBaseApplication.Companion in 4.976 seconds (JVM running for 5.666)
+[15:58:20.422:INFO :SpringBaseApplication:33] =============     Check Profile START =============
+[15:58:20.422:INFO :SpringBaseApplication:35] local
+[15:58:20.422:INFO :SpringBaseApplication:35] oauth
+[15:58:20.422:INFO :SpringBaseApplication:36] =============       Check Profile End ============= : activate profile count: 2
+[15:58:20.422:INFO :SpringBaseApplication:39] ============= Check Loaded Bean START =============
+[15:58:20.423:INFO :SpringBaseApplication:40] Loaded Bean : 386
+[15:58:20.423:INFO :SpringBaseApplication:41] =============   Check Loaded Bean END =============
+[15:58:20.423:INFO :SpringBaseApplication:43] =============             AppMain End ============= : 5077 ms
+[15:58:26.274:INFO :[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:58:26.276:INFO :DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+[15:58:26.277:INFO :DispatcherServlet:547] Completed initialization in 1 ms
+[15:59:22.341:INFO :ThreadPoolTaskExecutor:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[15:59:26.099:INFO :SpringBaseApplication$Companion:55] Starting SpringBaseApplication.Companion using Java 15.0.1 on junghoon.local with PID 45511 (/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[15:59:26.100:DEBUG:SpringBaseApplication$Companion:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[15:59:26.101:INFO :SpringBaseApplication$Companion:664] The following profiles are active: local,oauth
+[15:59:27.200:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[15:59:27.224:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[15:59:27.225:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[15:59:27.225:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[15:59:27.226:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[15:59:27.226:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[15:59:27.226:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[15:59:27.226:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application-oauth.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[15:59:27.226:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[15:59:27.257:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[15:59:27.661:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 5001 (http)
+[15:59:27.669:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-5001"]
+[15:59:27.669:INFO :StandardService:173] Starting service [Tomcat]
+[15:59:27.669:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[15:59:27.759:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[15:59:27.760:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 1609 ms
+[15:59:27.804:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[15:59:27.825:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[15:59:27.827:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[15:59:27.851:INFO :JasyptConfig:26] =============     Jasypt Config Start =============
+[15:59:27.857:INFO :JasyptConfig:38] =============       Jasypt Config End =============
+[15:59:27.859:INFO :DefaultLazyEncryptor:32] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@2120bed with name: encryptorBean
+[15:59:27.899:INFO :DataSourceConfig:30] DataSource Config Start
+[15:59:27.902:INFO :DataSourceConfig:36] DataSource Config End
+[15:59:27.931:INFO :MybatisConfig:40] ===== MybatisConfig Start =====
+[15:59:27.934:INFO :MybatisConfig:47] =====   MybatisConfig End =====
+[15:59:28.061:INFO :MybatisConfig:53] ===== sqlSessionTemplate Start =====
+[15:59:28.065:INFO :MybatisConfig:55] =====   sqlSessionTemplate End =====
+[15:59:28.489:INFO :JpaConfig:39] ===== EntityManagerFactory Start =====
+[15:59:28.523:DEBUG:logging:152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[15:59:29.718:INFO :LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:59:29.722:INFO :JpaConfig:58] =====   EntityManagerFactory End =====
+[15:59:29.738:INFO :JpaConfig:64] ===== TransactionManger Start =====
+[15:59:29.739:INFO :JpaConfig:66] =====   TransactionManger End =====
+[15:59:29.860:INFO :ThreadPoolTaskExecutor:181] Initializing ExecutorService 'applicationTaskExecutor'
+[15:59:30.183:INFO :Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-5001"]
+[15:59:30.201:INFO :TomcatWebServer:220] Tomcat started on port(s): 5001 (http) with context path ''
+[15:59:30.466:DEBUG:Validator:24] ERROR [ModelSpecification.spec] At least one type of specification is required
+[15:59:30.483:INFO :SpringBaseApplication$Companion:61] Started SpringBaseApplication.Companion in 4.773 seconds (JVM running for 5.282)
+[15:59:30.486:INFO :SpringBaseApplication:33] =============     Check Profile START =============
+[15:59:30.487:INFO :SpringBaseApplication:35] local
+[15:59:30.487:INFO :SpringBaseApplication:35] oauth
+[15:59:30.487:INFO :SpringBaseApplication:36] =============       Check Profile End ============= : activate profile count: 2
+[15:59:30.487:INFO :SpringBaseApplication:39] ============= Check Loaded Bean START =============
+[15:59:30.487:INFO :SpringBaseApplication:40] Loaded Bean : 386
+[15:59:30.487:INFO :SpringBaseApplication:41] =============   Check Loaded Bean END =============
+[15:59:30.487:INFO :SpringBaseApplication:43] =============             AppMain End ============= : 4872 ms
+[15:59:38.551:INFO :[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:59:38.552:INFO :DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+[15:59:38.553:INFO :DispatcherServlet:547] Completed initialization in 1 ms
+[15:59:38.723:INFO :ControllerAdvice:40]   session ID : C5BCBD38C83DEE02E3F835A65487ECC4
+[15:59:38.723:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[15:59:38.723:INFO :ControllerAdvice:42]          GID : 6f47b9e6-ee58-4619-b2e1-d927efad581a
+[15:59:38.724:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[15:59:38.724:INFO :ControllerAdvice:44]  request URL : GET
+[15:59:38.724:INFO :ControllerAdvice:45] query string : null
+[15:59:38.726:INFO :ControllerAdvice:51]         body : null
+[15:59:38.727:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[15:59:38.727:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[15:59:38.729:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[15:59:38.752:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[15:59:38.761:DEBUG:selectQusPaging:137] ==> Parameters: 
+[15:59:38.826:DEBUG:selectQusPaging:137] <==      Total: 1
+[15:59:38.828:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [99 ms]
+[15:59:38.829:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [102 ms] 
+[16:01:08.864:INFO :ControllerAdvice:40]   session ID : 43944DA4D31282D0A1D555959DA55413
+[16:01:08.865:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:01:08.865:INFO :ControllerAdvice:42]          GID : 8dfb4864-f910-4648-8ae8-fca432ddb6aa
+[16:01:08.866:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:01:08.866:INFO :ControllerAdvice:44]  request URL : GET
+[16:01:08.866:INFO :ControllerAdvice:45] query string : null
+[16:01:08.866:INFO :ControllerAdvice:51]         body : null
+[16:01:08.866:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:01:08.866:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:01:08.866:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:01:08.867:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:01:08.867:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:01:08.908:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:01:08.909:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [42 ms]
+[16:01:08.909:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [43 ms] 
+[16:08:11.251:INFO :ControllerAdvice:40]   session ID : 3E06740F1FBD3043770EC7B20A619D9D
+[16:08:11.254:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:08:11.254:INFO :ControllerAdvice:42]          GID : f2aa32c2-5f8d-437a-84e5-890b528a7bc4
+[16:08:11.255:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:08:11.255:INFO :ControllerAdvice:44]  request URL : GET
+[16:08:11.255:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[16:08:11.255:INFO :ControllerAdvice:51]         body : null
+[16:08:11.256:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:08:11.256:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:08:11.256:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[16:08:11.257:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:08:11.257:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:08:11.297:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:08:11.298:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [42 ms]
+[16:08:11.298:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [42 ms] 
+[16:10:31.106:INFO :ControllerAdvice:40]   session ID : B39C71795B822678185D81806658A01F
+[16:10:31.107:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:10:31.107:INFO :ControllerAdvice:42]          GID : b7aa0e51-0f3f-44ef-a684-d5f2ecb8ce92
+[16:10:31.108:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:10:31.108:INFO :ControllerAdvice:44]  request URL : GET
+[16:10:31.109:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[16:10:31.109:INFO :ControllerAdvice:51]         body : null
+[16:10:31.109:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:10:31.110:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:10:31.110:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[16:10:31.111:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:10:31.111:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:10:31.183:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:10:31.183:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [73 ms]
+[16:10:31.183:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [73 ms] 
+[16:13:22.129:INFO :ControllerAdvice:40]   session ID : 07B971B8D87CCDA791CF772B409EBB4B
+[16:13:22.132:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:13:22.132:INFO :ControllerAdvice:42]          GID : 4480abb9-37fb-4b26-9aef-0a66923e813d
+[16:13:22.132:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:13:22.133:INFO :ControllerAdvice:44]  request URL : GET
+[16:13:22.133:INFO :ControllerAdvice:45] query string : null
+[16:13:22.133:INFO :ControllerAdvice:51]         body : null
+[16:13:22.133:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:13:22.133:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:13:22.134:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:13:22.134:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:13:22.135:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:13:22.174:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:13:22.175:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [41 ms]
+[16:13:22.175:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [41 ms] 
+[16:14:39.868:INFO :ControllerAdvice:40]   session ID : BA7140E61FBC19DB12190CB4D1E40F09
+[16:14:39.869:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:14:39.869:INFO :ControllerAdvice:42]          GID : 4c2412b0-c236-400f-ade4-4391f3f422df
+[16:14:39.870:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:14:39.870:INFO :ControllerAdvice:44]  request URL : GET
+[16:14:39.870:INFO :ControllerAdvice:45] query string : null
+[16:14:39.870:INFO :ControllerAdvice:51]         body : null
+[16:14:39.870:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:14:39.870:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:14:39.870:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:14:39.871:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:14:39.871:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:14:39.911:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:14:39.912:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [41 ms]
+[16:14:39.912:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [42 ms] 
+[16:14:56.095:INFO :ControllerAdvice:40]   session ID : 89EBA6F202E913FC791218ADC29BFCC0
+[16:14:56.096:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:14:56.096:INFO :ControllerAdvice:42]          GID : b9c9b356-a6fd-4e0d-8720-fbff28d08f97
+[16:14:56.096:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:14:56.096:INFO :ControllerAdvice:44]  request URL : GET
+[16:14:56.096:INFO :ControllerAdvice:45] query string : null
+[16:14:56.097:INFO :ControllerAdvice:51]         body : null
+[16:14:56.097:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:14:56.097:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:14:56.097:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:14:56.098:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:14:56.099:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:14:56.140:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:14:56.141:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [43 ms]
+[16:14:56.141:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [44 ms] 
+[16:16:11.405:INFO :ControllerAdvice:40]   session ID : 978645A7441611DC0B88336D82C45D66
+[16:16:11.406:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:16:11.406:INFO :ControllerAdvice:42]          GID : 2bc3bbc4-d950-4797-9803-9bf8f2307a51
+[16:16:11.406:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:16:11.406:INFO :ControllerAdvice:44]  request URL : GET
+[16:16:11.407:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[16:16:11.407:INFO :ControllerAdvice:51]         body : null
+[16:16:11.407:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:16:11.407:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:16:11.408:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[16:16:11.408:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:16:11.409:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:16:11.448:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:16:11.449:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [41 ms]
+[16:16:11.449:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [41 ms] 
+[16:16:42.976:INFO :ControllerAdvice:40]   session ID : C748C1DE3E40F5616B9451077DE2525F
+[16:16:42.977:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:16:42.977:INFO :ControllerAdvice:42]          GID : 67c3a58b-0805-4ef5-ad1e-d249b20bdf46
+[16:16:42.977:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:16:42.978:INFO :ControllerAdvice:44]  request URL : GET
+[16:16:42.978:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[16:16:42.978:INFO :ControllerAdvice:51]         body : null
+[16:16:42.978:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:16:42.979:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:16:42.979:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[16:16:42.979:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:16:42.980:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:16:43.019:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:16:43.020:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [41 ms]
+[16:16:43.020:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [41 ms] 
+[16:17:47.488:INFO :ControllerAdvice:40]   session ID : D84CFBD00D11D8BF764992DFA18C1B78
+[16:17:47.489:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:17:47.489:INFO :ControllerAdvice:42]          GID : b5e87e4e-5b39-4a5a-92da-24be07dce350
+[16:17:47.489:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:17:47.489:INFO :ControllerAdvice:44]  request URL : GET
+[16:17:47.490:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[16:17:47.490:INFO :ControllerAdvice:51]         body : null
+[16:17:47.490:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:17:47.491:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:17:47.491:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[16:17:47.492:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:17:47.492:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:17:47.540:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:17:47.541:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [50 ms]
+[16:17:47.541:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [50 ms] 
+[16:18:13.691:INFO :ControllerAdvice:40]   session ID : B6466B392953020ADBDA99B427665A9F
+[16:18:13.692:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:18:13.692:INFO :ControllerAdvice:42]          GID : eda4dd8f-8a4d-4b28-98ad-ce6deb0bd3c5
+[16:18:13.693:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:18:13.693:INFO :ControllerAdvice:44]  request URL : GET
+[16:18:13.693:INFO :ControllerAdvice:45] query string : null
+[16:18:13.693:INFO :ControllerAdvice:51]         body : null
+[16:18:13.693:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:18:13.693:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:18:13.693:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:18:13.694:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:18:13.694:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:18:13.734:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:18:13.734:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [41 ms]
+[16:18:13.735:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [42 ms] 
+[16:18:52.366:INFO :ControllerAdvice:40]   session ID : 7016DADC5683E407AE8A339CD700ADE7
+[16:18:52.367:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:18:52.367:INFO :ControllerAdvice:42]          GID : 3ab07495-aff0-449f-b5bd-fc4c59caa282
+[16:18:52.367:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:18:52.367:INFO :ControllerAdvice:44]  request URL : GET
+[16:18:52.368:INFO :ControllerAdvice:45] query string : null
+[16:18:52.368:INFO :ControllerAdvice:51]         body : null
+[16:18:52.368:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:18:52.369:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:18:52.369:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:18:52.370:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:18:52.370:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:18:52.410:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:18:52.410:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [41 ms]
+[16:18:52.411:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [42 ms] 
+[16:19:06.746:INFO :ControllerAdvice:40]   session ID : 6BAE69C57D4DA7321D362E1075EEE0FC
+[16:19:06.747:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:19:06.747:INFO :ControllerAdvice:42]          GID : fa2350e0-abe7-413e-9012-0149d7e954fd
+[16:19:06.747:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:19:06.747:INFO :ControllerAdvice:44]  request URL : GET
+[16:19:06.747:INFO :ControllerAdvice:45] query string : null
+[16:19:06.748:INFO :ControllerAdvice:51]         body : null
+[16:19:06.748:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:19:06.748:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:19:06.748:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:19:06.748:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:19:06.749:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:19:06.789:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:19:06.790:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [42 ms]
+[16:19:06.790:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [42 ms] 
+[16:19:54.865:INFO :ControllerAdvice:40]   session ID : D09368C34E39B94AE75B490BF18458DF
+[16:19:54.866:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:19:54.866:INFO :ControllerAdvice:42]          GID : 333fac46-f0da-4885-8e96-afb474155b73
+[16:19:54.866:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:19:54.866:INFO :ControllerAdvice:44]  request URL : GET
+[16:19:54.866:INFO :ControllerAdvice:45] query string : null
+[16:19:54.867:INFO :ControllerAdvice:51]         body : null
+[16:19:54.867:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:19:54.867:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:19:54.867:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:19:54.867:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:19:54.868:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:19:54.910:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:19:54.910:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [43 ms]
+[16:19:54.911:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [44 ms] 
+[16:20:01.523:INFO :ControllerAdvice:40]   session ID : 1728BD167D82750F1B510CBC75EE3C17
+[16:20:01.523:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:20:01.523:INFO :ControllerAdvice:42]          GID : 9f407ee6-c630-48b3-a01d-2d553f95391b
+[16:20:01.524:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:20:01.524:INFO :ControllerAdvice:44]  request URL : GET
+[16:20:01.524:INFO :ControllerAdvice:45] query string : null
+[16:20:01.524:INFO :ControllerAdvice:51]         body : null
+[16:20:01.524:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:20:01.524:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:20:01.524:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:20:01.526:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:20:01.526:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:20:01.569:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:20:01.570:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [46 ms]
+[16:20:01.570:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [46 ms] 
+[16:20:27.852:INFO :ControllerAdvice:40]   session ID : EF303C988F260F10F6624A03B64D6574
+[16:20:27.852:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:20:27.852:INFO :ControllerAdvice:42]          GID : 8318ebff-4581-4fd9-b271-287f40c8994e
+[16:20:27.853:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:20:27.853:INFO :ControllerAdvice:44]  request URL : GET
+[16:20:27.854:INFO :ControllerAdvice:45] query string : null
+[16:20:27.855:INFO :ControllerAdvice:51]         body : null
+[16:20:27.855:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:20:27.856:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:20:27.856:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:20:27.858:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:20:27.860:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:20:27.903:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:20:27.905:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [49 ms]
+[16:20:27.905:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [49 ms] 
+[16:23:37.528:INFO :ControllerAdvice:40]   session ID : 9D150C59B0CF88D5A80E918EB9931D58
+[16:23:37.529:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:23:37.529:INFO :ControllerAdvice:42]          GID : feee6cb0-2af8-4b26-a8b7-42b2ba0e3c8a
+[16:23:37.529:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:23:37.529:INFO :ControllerAdvice:44]  request URL : GET
+[16:23:37.529:INFO :ControllerAdvice:45] query string : null
+[16:23:37.529:INFO :ControllerAdvice:51]         body : null
+[16:23:37.530:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:23:37.530:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:23:37.530:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:23:37.530:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:23:37.531:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:23:37.571:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:23:37.571:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [41 ms]
+[16:23:37.571:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [41 ms] 
+[16:28:27.249:INFO :ControllerAdvice:40]   session ID : 3C59DDF878FCC5CEEFB5CD68C9B7465D
+[16:28:27.249:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:28:27.249:INFO :ControllerAdvice:42]          GID : 57ab6715-52bd-498d-8643-e3dfbed4b611
+[16:28:27.250:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:28:27.250:INFO :ControllerAdvice:44]  request URL : GET
+[16:28:27.250:INFO :ControllerAdvice:45] query string : null
+[16:28:27.250:INFO :ControllerAdvice:51]         body : null
+[16:28:27.250:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:28:27.250:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:28:27.250:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:28:27.251:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:28:27.251:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:28:27.293:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:28:27.294:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [44 ms]
+[16:28:27.294:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [44 ms] 
+[16:28:37.596:INFO :ControllerAdvice:40]   session ID : 7A4A6244A72CA5BD6C899916BEFB9942
+[16:28:37.597:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:28:37.597:INFO :ControllerAdvice:42]          GID : 028f47bf-8a3c-415e-b939-d8c5555da088
+[16:28:37.597:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:28:37.597:INFO :ControllerAdvice:44]  request URL : GET
+[16:28:37.597:INFO :ControllerAdvice:45] query string : null
+[16:28:37.597:INFO :ControllerAdvice:51]         body : null
+[16:28:37.597:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:28:37.597:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:28:37.598:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:28:37.598:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:28:37.598:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:28:37.641:DEBUG:selectQusPaging:137] <==      Total: 1
+[16:28:37.642:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [44 ms]
+[16:28:37.642:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [44 ms] 
+[16:32:38.500:INFO :ControllerAdvice:40]   session ID : 082F9FF903DA6F4694A6B87FB7F6378F
+[16:32:38.501:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:32:38.501:INFO :ControllerAdvice:42]          GID : 46443664-bc51-4dc1-a1aa-69ccebe8bd94
+[16:32:38.501:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:32:38.501:INFO :ControllerAdvice:44]  request URL : GET
+[16:32:38.501:INFO :ControllerAdvice:45] query string : null
+[16:32:38.502:INFO :ControllerAdvice:51]         body : null
+[16:32:38.502:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:32:38.502:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:32:38.502:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:32:38.502:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:32:38.503:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:32:38.582:DEBUG:selectQusPaging:137] <==      Total: 20
+[16:32:38.582:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [80 ms]
+[16:32:38.582:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [80 ms] 
+[16:32:51.601:INFO :ControllerAdvice:40]   session ID : FAD5B7059794416DDC1637FA9D471A37
+[16:32:51.601:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:32:51.601:INFO :ControllerAdvice:42]          GID : afb01375-baf6-4a43-9536-fa061cfd5ba7
+[16:32:51.602:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:32:51.602:INFO :ControllerAdvice:44]  request URL : GET
+[16:32:51.602:INFO :ControllerAdvice:45] query string : null
+[16:32:51.602:INFO :ControllerAdvice:51]         body : null
+[16:32:51.602:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:32:51.602:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:32:51.602:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:32:51.603:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst
+[16:32:51.603:DEBUG:selectQusPaging:137] ==> Parameters: 
+[16:32:51.681:DEBUG:selectQusPaging:137] <==      Total: 20
+[16:32:51.682:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [80 ms]
+[16:32:51.682:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [80 ms] 
+[16:34:29.371:INFO :ThreadPoolTaskExecutor:218] Shutting down ExecutorService 'applicationTaskExecutor'
+[16:34:34.861:INFO :SpringBaseApplication$Companion:55] Starting SpringBaseApplication.Companion using Java 15.0.1 on junghoon.local with PID 49541 (/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[16:34:34.862:DEBUG:SpringBaseApplication$Companion:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[16:34:34.862:INFO :SpringBaseApplication$Companion:664] The following profiles are active: local,oauth
+[16:34:35.985:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[16:34:36.003:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[16:34:36.004:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[16:34:36.004:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[16:34:36.005:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[16:34:36.005:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[16:34:36.005:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[16:34:36.006:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application-oauth.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[16:34:36.006:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[16:34:36.037:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[16:34:36.457:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 5001 (http)
+[16:34:36.465:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-5001"]
+[16:34:36.466:INFO :StandardService:173] Starting service [Tomcat]
+[16:34:36.466:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[16:34:36.560:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[16:34:36.560:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 1644 ms
+[16:34:36.608:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[16:34:36.632:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[16:34:36.634:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[16:34:36.661:INFO :JasyptConfig:26] =============     Jasypt Config Start =============
+[16:34:36.669:INFO :JasyptConfig:38] =============       Jasypt Config End =============
+[16:34:36.671:INFO :DefaultLazyEncryptor:32] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@61a704d3 with name: encryptorBean
+[16:34:36.712:INFO :DataSourceConfig:30] DataSource Config Start
+[16:34:36.716:INFO :DataSourceConfig:36] DataSource Config End
+[16:34:36.746:INFO :MybatisConfig:40] ===== MybatisConfig Start =====
+[16:34:36.748:INFO :MybatisConfig:47] =====   MybatisConfig End =====
+[16:34:36.876:INFO :MybatisConfig:53] ===== sqlSessionTemplate Start =====
+[16:34:36.879:INFO :MybatisConfig:55] =====   sqlSessionTemplate End =====
+[16:34:37.294:INFO :JpaConfig:39] ===== EntityManagerFactory Start =====
+[16:34:37.325:DEBUG:logging:152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[16:34:38.541:INFO :LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[16:34:38.545:INFO :JpaConfig:58] =====   EntityManagerFactory End =====
+[16:34:38.562:INFO :JpaConfig:64] ===== TransactionManger Start =====
+[16:34:38.562:INFO :JpaConfig:66] =====   TransactionManger End =====
+[16:34:38.716:INFO :ThreadPoolTaskExecutor:181] Initializing ExecutorService 'applicationTaskExecutor'
+[16:34:39.060:INFO :Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-5001"]
+[16:34:39.077:INFO :TomcatWebServer:220] Tomcat started on port(s): 5001 (http) with context path ''
+[16:34:39.340:DEBUG:Validator:24] ERROR [ModelSpecification.spec] At least one type of specification is required
+[16:34:39.357:INFO :SpringBaseApplication$Companion:61] Started SpringBaseApplication.Companion in 4.958 seconds (JVM running for 5.697)
+[16:34:39.360:INFO :SpringBaseApplication:33] =============     Check Profile START =============
+[16:34:39.361:INFO :SpringBaseApplication:35] local
+[16:34:39.361:INFO :SpringBaseApplication:35] oauth
+[16:34:39.361:INFO :SpringBaseApplication:36] =============       Check Profile End ============= : activate profile count: 2
+[16:34:39.361:INFO :SpringBaseApplication:39] ============= Check Loaded Bean START =============
+[16:34:39.361:INFO :SpringBaseApplication:40] Loaded Bean : 386
+[16:34:39.361:INFO :SpringBaseApplication:41] =============   Check Loaded Bean END =============
+[16:34:39.361:INFO :SpringBaseApplication:43] =============             AppMain End ============= : 5057 ms
+[16:34:42.049:INFO :[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[16:34:42.050:INFO :DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+[16:34:42.051:INFO :DispatcherServlet:547] Completed initialization in 1 ms
+[16:34:42.206:INFO :ControllerAdvice:40]   session ID : 14EE020F9E300C09B08C41A24B8E5EBF
+[16:34:42.206:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:34:42.207:INFO :ControllerAdvice:42]          GID : 68933851-dab6-47a7-b37a-c440d691403a
+[16:34:42.207:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:34:42.207:INFO :ControllerAdvice:44]  request URL : GET
+[16:34:42.207:INFO :ControllerAdvice:45] query string : null
+[16:34:42.209:INFO :ControllerAdvice:51]         body : null
+[16:34:42.210:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:34:42.210:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:34:42.212:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=null)
+[16:34:42.301:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[16:34:42.311:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[16:34:42.360:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[16:34:42.362:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[16:34:42.363:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[16:34:42.452:DEBUG:selectQusPaging:137] <==      Total: 15
+[16:34:42.453:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [241 ms]
+[16:34:42.454:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [244 ms] 
+[16:38:01.175:INFO :ControllerAdvice:40]   session ID : 50409287D56CD66B483958713C3CFEAB
+[16:38:01.175:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:38:01.176:INFO :ControllerAdvice:42]          GID : fdd42260-23ac-47c9-8576-0e41e3c5b6ff
+[16:38:01.176:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:38:01.176:INFO :ControllerAdvice:44]  request URL : GET
+[16:38:01.176:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[16:38:01.176:INFO :ControllerAdvice:51]         body : null
+[16:38:01.176:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:38:01.177:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:38:01.177:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[16:38:01.180:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[16:38:01.180:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[16:38:01.222:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[16:38:01.223:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[16:38:01.223:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[16:38:01.311:DEBUG:selectQusPaging:137] <==      Total: 15
+[16:38:01.311:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [134 ms]
+[16:38:01.312:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [135 ms] 
+[16:39:19.435:INFO :ControllerAdvice:40]   session ID : 737AAF8C0CE0C902DC365D281B173AD0
+[16:39:19.435:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:39:19.435:INFO :ControllerAdvice:42]          GID : 2820774a-2513-4739-922d-f4f7ddd851a9
+[16:39:19.436:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:39:19.436:INFO :ControllerAdvice:44]  request URL : GET
+[16:39:19.436:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[16:39:19.436:INFO :ControllerAdvice:51]         body : null
+[16:39:19.436:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:39:19.437:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:39:19.437:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[16:39:19.444:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[16:39:19.445:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[16:39:19.487:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[16:39:19.487:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[16:39:19.488:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[16:39:19.570:DEBUG:selectQusPaging:137] <==      Total: 15
+[16:39:19.570:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [133 ms]
+[16:39:19.570:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [133 ms] 
+[16:39:24.209:INFO :ControllerAdvice:40]   session ID : 44D6551095592B8037A43E321198CF18
+[16:39:24.210:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:39:24.210:INFO :ControllerAdvice:42]          GID : d79d2eb7-727d-4793-ba2b-6f1f105e1af3
+[16:39:24.210:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:39:24.211:INFO :ControllerAdvice:44]  request URL : GET
+[16:39:24.211:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[16:39:24.211:INFO :ControllerAdvice:51]         body : null
+[16:39:24.211:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:39:24.212:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:39:24.212:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[16:39:24.213:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[16:39:24.214:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[16:39:24.261:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[16:39:24.261:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[16:39:24.262:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[16:39:24.346:DEBUG:selectQusPaging:137] <==      Total: 15
+[16:39:24.346:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [134 ms]
+[16:39:24.346:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [134 ms] 
+[16:42:50.620:INFO :ControllerAdvice:40]   session ID : 2222253AD73D7591DFA6F1ABD29D2C95
+[16:42:50.620:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:42:50.621:INFO :ControllerAdvice:42]          GID : fbf25010-8312-4d05-8234-1cf5176b040a
+[16:42:50.621:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:42:50.621:INFO :ControllerAdvice:44]  request URL : GET
+[16:42:50.621:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[16:42:50.621:INFO :ControllerAdvice:51]         body : null
+[16:42:50.621:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:42:50.621:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:42:50.622:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[16:42:50.623:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[16:42:50.623:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[16:42:50.663:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[16:42:50.664:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[16:42:50.664:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[16:42:50.751:DEBUG:selectQusPaging:137] <==      Total: 15
+[16:42:50.751:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [129 ms]
+[16:42:50.752:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [131 ms] 
+[16:49:18.900:INFO :ControllerAdvice:40]   session ID : 8A999FDB67FA73FE809917A435CD2830
+[16:49:18.903:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:49:18.904:INFO :ControllerAdvice:42]          GID : 01d77c75-a224-4682-8f96-3a8372195b7d
+[16:49:18.904:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:49:18.904:INFO :ControllerAdvice:44]  request URL : GET
+[16:49:18.904:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[16:49:18.904:INFO :ControllerAdvice:51]         body : null
+[16:49:18.904:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:49:18.904:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:49:18.904:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[16:49:18.906:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[16:49:18.906:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[16:49:18.945:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[16:49:18.946:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[16:49:18.947:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[16:49:19.038:DEBUG:selectQusPaging:137] <==      Total: 15
+[16:49:19.038:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [133 ms]
+[16:49:19.038:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [134 ms] 
+[16:49:25.436:INFO :ControllerAdvice:40]   session ID : 1A6606771F762BC7B8C19993C330F677
+[16:49:25.436:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:49:25.436:INFO :ControllerAdvice:42]          GID : a6788f31-21e9-4b31-87b2-bb6d4e78c5c1
+[16:49:25.437:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:49:25.437:INFO :ControllerAdvice:44]  request URL : GET
+[16:49:25.437:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[16:49:25.437:INFO :ControllerAdvice:51]         body : null
+[16:49:25.437:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:49:25.437:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:49:25.438:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[16:49:25.440:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[16:49:25.440:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[16:49:25.480:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[16:49:25.480:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[16:49:25.481:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[16:49:25.562:DEBUG:selectQusPaging:137] <==      Total: 15
+[16:49:25.563:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [125 ms]
+[16:49:25.563:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [125 ms] 
+[16:49:44.989:INFO :ControllerAdvice:40]   session ID : 1E6DD1180BFC77E8D83C772703E471DB
+[16:49:44.990:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:49:44.990:INFO :ControllerAdvice:42]          GID : 61791e27-43f4-4691-aa06-3d4f4c4723ff
+[16:49:44.991:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:49:44.991:INFO :ControllerAdvice:44]  request URL : GET
+[16:49:44.991:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[16:49:44.991:INFO :ControllerAdvice:51]         body : null
+[16:49:44.992:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:49:44.992:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:49:44.993:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[16:49:44.995:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[16:49:44.996:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[16:49:45.045:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[16:49:45.046:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[16:49:45.047:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[16:49:45.138:DEBUG:selectQusPaging:137] <==      Total: 15
+[16:49:45.139:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [146 ms]
+[16:49:45.140:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [148 ms] 
+[16:57:22.491:INFO :ControllerAdvice:40]   session ID : 3EE919CF66BE55A0580304DBCB1E3D77
+[16:57:22.493:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[16:57:22.494:INFO :ControllerAdvice:42]          GID : 93a99226-254e-443b-ae63-de995b1fe4fa
+[16:57:22.494:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[16:57:22.494:INFO :ControllerAdvice:44]  request URL : GET
+[16:57:22.494:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[16:57:22.494:INFO :ControllerAdvice:51]         body : null
+[16:57:22.494:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[16:57:22.494:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[16:57:22.494:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[16:57:22.496:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[16:57:22.496:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[16:57:22.537:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[16:57:22.538:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[16:57:22.538:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[16:57:22.622:DEBUG:selectQusPaging:137] <==      Total: 15
+[16:57:22.622:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [128 ms]
+[16:57:22.622:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [128 ms] 
+[17:00:39.618:INFO :ControllerAdvice:40]   session ID : 0E4FAA287DC6797828158AD2FD4B44BF
+[17:00:39.619:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:00:39.619:INFO :ControllerAdvice:42]          GID : f8574e0a-8dff-4b80-aaee-ab98d1851fc4
+[17:00:39.619:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:00:39.619:INFO :ControllerAdvice:44]  request URL : GET
+[17:00:39.620:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:00:39.620:INFO :ControllerAdvice:51]         body : null
+[17:00:39.620:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:00:39.620:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:00:39.620:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:00:39.621:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:00:39.622:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:00:39.662:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:00:39.663:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:00:39.663:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:00:39.750:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:00:39.750:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [130 ms]
+[17:00:39.751:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [131 ms] 
+[17:01:07.199:INFO :ControllerAdvice:40]   session ID : 881A2BEC823B9F24DBDFB7BEB8105347
+[17:01:07.200:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:01:07.200:INFO :ControllerAdvice:42]          GID : e2b56d43-7ee2-4a4b-ae8e-10518a5ded92
+[17:01:07.200:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:01:07.200:INFO :ControllerAdvice:44]  request URL : GET
+[17:01:07.201:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:01:07.201:INFO :ControllerAdvice:51]         body : null
+[17:01:07.201:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:01:07.201:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:01:07.201:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:01:07.202:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:01:07.203:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:01:07.243:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:01:07.244:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:01:07.244:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:01:07.331:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:01:07.332:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [131 ms]
+[17:01:07.332:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [131 ms] 
+[17:01:56.768:INFO :ControllerAdvice:40]   session ID : F3DFF443F0E1F62ADE12FE8F8423F641
+[17:01:56.768:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:01:56.769:INFO :ControllerAdvice:42]          GID : 0f9a7b7c-4756-4048-b5c2-d6f87f65167b
+[17:01:56.769:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:01:56.769:INFO :ControllerAdvice:44]  request URL : GET
+[17:01:56.769:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:01:56.770:INFO :ControllerAdvice:51]         body : null
+[17:01:56.770:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:01:56.770:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:01:56.770:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:01:56.772:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:01:56.772:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:01:56.813:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:01:56.814:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:01:56.815:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:01:56.900:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:01:56.900:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [129 ms]
+[17:01:56.900:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [130 ms] 
+[17:04:22.503:INFO :ControllerAdvice:40]   session ID : 9EA25DC9E32937E86C090E6A22E0B6FD
+[17:04:22.505:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:04:22.505:INFO :ControllerAdvice:42]          GID : 9da1381e-b00a-4ee8-8702-d55ce1d7887c
+[17:04:22.505:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:04:22.506:INFO :ControllerAdvice:44]  request URL : GET
+[17:04:22.506:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:04:22.506:INFO :ControllerAdvice:51]         body : null
+[17:04:22.506:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:04:22.506:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:04:22.506:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:04:22.509:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:04:22.509:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:04:22.550:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:04:22.550:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:04:22.551:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:04:22.640:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:04:22.641:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [134 ms]
+[17:04:22.641:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [135 ms] 
+[17:06:34.470:INFO :ControllerAdvice:40]   session ID : 52598625849B6647B841E7A224F311E8
+[17:06:34.472:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:06:34.472:INFO :ControllerAdvice:42]          GID : 02404013-3d28-43f3-b7ce-70ed18101b67
+[17:06:34.472:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:06:34.472:INFO :ControllerAdvice:44]  request URL : GET
+[17:06:34.473:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:06:34.473:INFO :ControllerAdvice:51]         body : null
+[17:06:34.473:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:06:34.473:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:06:34.473:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:06:34.475:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:06:34.475:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:06:34.518:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:06:34.518:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:06:34.519:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:06:34.607:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:06:34.608:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [135 ms]
+[17:06:34.608:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [135 ms] 
+[17:07:32.221:INFO :ControllerAdvice:40]   session ID : 591CC1FE3822904ED86F9E9CFCF3E00E
+[17:07:32.221:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:07:32.221:INFO :ControllerAdvice:42]          GID : ec4f49cb-fee1-4631-9240-5e345db27a72
+[17:07:32.222:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:07:32.222:INFO :ControllerAdvice:44]  request URL : GET
+[17:07:32.222:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:07:32.222:INFO :ControllerAdvice:51]         body : null
+[17:07:32.222:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:07:32.222:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:07:32.223:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:07:32.225:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:07:32.225:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:07:32.266:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:07:32.267:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:07:32.267:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:07:32.369:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:07:32.369:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [146 ms]
+[17:07:32.370:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [147 ms] 
+[17:08:09.753:INFO :ControllerAdvice:40]   session ID : FDF0A3985D4106F31D57EC65CD9D8694
+[17:08:09.753:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:08:09.753:INFO :ControllerAdvice:42]          GID : 578be6c5-4eb2-4661-a3f2-d32a3db02eda
+[17:08:09.753:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:08:09.754:INFO :ControllerAdvice:44]  request URL : GET
+[17:08:09.754:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:08:09.754:INFO :ControllerAdvice:51]         body : null
+[17:08:09.754:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:08:09.755:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:08:09.755:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:08:09.757:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:08:09.757:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:08:09.802:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:08:09.804:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:08:09.805:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:08:09.888:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:08:09.888:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [133 ms]
+[17:08:09.888:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [133 ms] 
+[17:08:34.766:INFO :ControllerAdvice:40]   session ID : 8DD834346E4D293974FD0528FAC78B5B
+[17:08:34.767:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:08:34.767:INFO :ControllerAdvice:42]          GID : 5221e5e5-f1cf-4013-8d2c-268b7c8e0a4a
+[17:08:34.767:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:08:34.767:INFO :ControllerAdvice:44]  request URL : GET
+[17:08:34.768:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:08:34.768:INFO :ControllerAdvice:51]         body : null
+[17:08:34.768:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:08:34.768:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:08:34.768:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:08:34.769:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:08:34.770:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:08:34.813:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:08:34.814:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:08:34.815:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:08:34.952:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:08:34.952:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [184 ms]
+[17:08:34.952:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [184 ms] 
+[17:12:06.592:INFO :ControllerAdvice:40]   session ID : 95E2C0BA3D03F8F5C9491EEAD13931D2
+[17:12:06.593:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:12:06.593:INFO :ControllerAdvice:42]          GID : e9e991ae-bce3-4357-b498-671ded52b817
+[17:12:06.593:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:12:06.593:INFO :ControllerAdvice:44]  request URL : GET
+[17:12:06.593:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:12:06.594:INFO :ControllerAdvice:51]         body : null
+[17:12:06.594:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:12:06.594:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:12:06.594:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:12:06.595:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:12:06.596:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:12:06.635:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:12:06.635:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:12:06.636:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:12:06.719:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:12:06.719:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [125 ms]
+[17:12:06.719:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [125 ms] 
+[17:12:51.022:INFO :ControllerAdvice:40]   session ID : 7F0439D9D5295BF459123F711F3334D8
+[17:12:51.022:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:12:51.022:INFO :ControllerAdvice:42]          GID : a9f8ffb8-42a2-4536-ac61-00b2da327dc3
+[17:12:51.023:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:12:51.023:INFO :ControllerAdvice:44]  request URL : GET
+[17:12:51.023:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:12:51.024:INFO :ControllerAdvice:51]         body : null
+[17:12:51.024:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:12:51.024:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:12:51.024:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:12:51.031:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:12:51.032:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:12:51.085:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:12:51.086:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:12:51.086:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:12:51.170:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:12:51.171:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [146 ms]
+[17:12:51.171:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [147 ms] 
+[17:15:49.364:INFO :ControllerAdvice:40]   session ID : 96B31223164DD70D523465AE5421685B
+[17:15:49.364:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:15:49.365:INFO :ControllerAdvice:42]          GID : f5f21318-1d2f-4771-a801-4abf4c5db095
+[17:15:49.365:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:15:49.365:INFO :ControllerAdvice:44]  request URL : GET
+[17:15:49.365:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:15:49.365:INFO :ControllerAdvice:51]         body : null
+[17:15:49.365:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:15:49.365:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:15:49.366:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:15:49.367:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:15:49.367:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:15:49.408:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:15:49.409:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:15:49.410:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:15:49.498:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:15:49.498:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [132 ms]
+[17:15:49.498:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [133 ms] 
+[17:15:51.868:INFO :ControllerAdvice:40]   session ID : 50F98572A215307C0733F94A595D5050
+[17:15:51.869:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:15:51.869:INFO :ControllerAdvice:42]          GID : af64a300-aad5-4c89-975a-c8a78d00761e
+[17:15:51.869:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:15:51.869:INFO :ControllerAdvice:44]  request URL : GET
+[17:15:51.869:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:15:51.870:INFO :ControllerAdvice:51]         body : null
+[17:15:51.870:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:15:51.870:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:15:51.870:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:15:51.871:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:15:51.872:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:15:51.911:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:15:51.912:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:15:51.912:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:15:51.991:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:15:51.991:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [121 ms]
+[17:15:51.991:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [121 ms] 
+[17:17:49.311:INFO :ControllerAdvice:40]   session ID : 0F26FB8EE094B8AF8FD5D3544947BB09
+[17:17:49.312:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:17:49.312:INFO :ControllerAdvice:42]          GID : f5825142-4815-42f2-8bc0-46adc862ccae
+[17:17:49.312:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:17:49.312:INFO :ControllerAdvice:44]  request URL : GET
+[17:17:49.312:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:17:49.313:INFO :ControllerAdvice:51]         body : null
+[17:17:49.313:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:17:49.313:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:17:49.313:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:17:49.315:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:17:49.315:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:17:49.354:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:17:49.355:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:17:49.356:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:17:49.438:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:17:49.438:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [125 ms]
+[17:17:49.438:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [125 ms] 
+[17:17:50.455:INFO :ControllerAdvice:40]   session ID : 3A42ECEAC5ECB19E1CCA9B39D3933BE8
+[17:17:50.455:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:17:50.455:INFO :ControllerAdvice:42]          GID : d1e087b2-f708-4b13-a682-e29838190613
+[17:17:50.455:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:17:50.456:INFO :ControllerAdvice:44]  request URL : GET
+[17:17:50.456:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=2
+[17:17:50.456:INFO :ControllerAdvice:51]         body : null
+[17:17:50.456:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:17:50.456:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:17:50.457:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=2, pageSize=15, orderBy=)
+[17:17:50.458:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:17:50.459:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:17:50.500:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:17:50.501:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ? OFFSET ?
+[17:17:50.502:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer), 15(Long)
+[17:17:50.548:DEBUG:selectQusPaging:137] <==      Total: 5
+[17:17:50.548:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [91 ms]
+[17:17:50.548:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [91 ms] 
+[17:21:48.992:INFO :ControllerAdvice:40]   session ID : 78754E5F58CB78D21B032F405BB461F4
+[17:21:48.993:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:21:48.993:INFO :ControllerAdvice:42]          GID : 1c94eab8-4fb2-4dfd-95a5-5a17e42c6962
+[17:21:48.993:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:21:48.993:INFO :ControllerAdvice:44]  request URL : GET
+[17:21:48.993:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:21:48.994:INFO :ControllerAdvice:51]         body : null
+[17:21:48.994:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:21:48.994:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:21:48.994:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:21:48.996:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:21:48.996:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:21:49.033:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:21:49.034:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:21:49.034:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:21:49.111:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:21:49.112:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [118 ms]
+[17:21:49.112:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [118 ms] 
+[17:22:49.332:INFO :ControllerAdvice:40]   session ID : 4FC19F787BBDC83217C02549A8C1813E
+[17:22:49.333:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:22:49.333:INFO :ControllerAdvice:42]          GID : 4b4b84f5-a651-4449-a3c2-b9e0ec8b329b
+[17:22:49.333:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:22:49.334:INFO :ControllerAdvice:44]  request URL : GET
+[17:22:49.334:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:22:49.334:INFO :ControllerAdvice:51]         body : null
+[17:22:49.334:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:22:49.334:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:22:49.334:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:22:49.336:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:22:49.336:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:22:49.375:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:22:49.375:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:22:49.376:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:22:49.453:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:22:49.453:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [118 ms]
+[17:22:49.453:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [119 ms] 
+[17:23:00.077:INFO :ControllerAdvice:40]   session ID : F4E500AC9E7E5CC4EE2AD679E9FDA280
+[17:23:00.078:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:23:00.078:INFO :ControllerAdvice:42]          GID : fbeaa6eb-d7d9-4e9b-8ff7-06eb32f39851
+[17:23:00.078:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:23:00.078:INFO :ControllerAdvice:44]  request URL : GET
+[17:23:00.078:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:23:00.078:INFO :ControllerAdvice:51]         body : null
+[17:23:00.078:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:23:00.079:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:23:00.079:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:23:00.080:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:23:00.080:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:23:00.121:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:23:00.121:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:23:00.122:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:23:00.207:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:23:00.208:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [129 ms]
+[17:23:00.208:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [129 ms] 
+[17:23:02.592:INFO :ControllerAdvice:40]   session ID : C80E09BEA2C23A0A236205468A0A6864
+[17:23:02.593:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:23:02.593:INFO :ControllerAdvice:42]          GID : 3723f437-800c-48b7-8e12-5a6b5fc1e9b4
+[17:23:02.593:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:23:02.594:INFO :ControllerAdvice:44]  request URL : GET
+[17:23:02.594:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=2
+[17:23:02.594:INFO :ControllerAdvice:51]         body : null
+[17:23:02.594:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:23:02.594:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:23:02.594:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=2, pageSize=15, orderBy=)
+[17:23:02.596:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:23:02.596:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:23:02.635:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:23:02.636:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ? OFFSET ?
+[17:23:02.636:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer), 15(Long)
+[17:23:02.676:DEBUG:selectQusPaging:137] <==      Total: 5
+[17:23:02.676:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [82 ms]
+[17:23:02.676:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [82 ms] 
+[17:23:21.636:INFO :ControllerAdvice:40]   session ID : 6BF4332AA1401C602E87D4EB3779DDBB
+[17:23:21.636:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:23:21.636:INFO :ControllerAdvice:42]          GID : cf40f7a5-7cd3-4b77-a5aa-0f0b21def1e3
+[17:23:21.637:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:23:21.637:INFO :ControllerAdvice:44]  request URL : GET
+[17:23:21.637:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=1
+[17:23:21.637:INFO :ControllerAdvice:51]         body : null
+[17:23:21.637:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:23:21.637:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:23:21.637:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=1, pageSize=15, orderBy=)
+[17:23:21.638:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:23:21.638:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:23:21.677:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:23:21.679:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ?
+[17:23:21.679:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer)
+[17:23:21.771:DEBUG:selectQusPaging:137] <==      Total: 15
+[17:23:21.772:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [135 ms]
+[17:23:21.772:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [135 ms] 
+[17:23:22.624:INFO :ControllerAdvice:40]   session ID : 24DD7CF826E9B7A15FBFCEC3D3454C9B
+[17:23:22.625:INFO :ControllerAdvice:41]    client IP : 0:0:0:0:0:0:0:1
+[17:23:22.625:INFO :ControllerAdvice:42]          GID : 738e1128-7bc5-41c1-9305-f7dcef07e0bd
+[17:23:22.625:INFO :ControllerAdvice:43]       method : Current HttpServletRequest.method
+[17:23:22.625:INFO :ControllerAdvice:44]  request URL : GET
+[17:23:22.625:INFO :ControllerAdvice:45] query string : orderBy=&pageNum=2
+[17:23:22.625:INFO :ControllerAdvice:51]         body : null
+[17:23:22.625:INFO :ControllerAdvice:52]      referer : http://localhost:3001/
+[17:23:22.625:INFO :ControllerAdvice:53] >>>>> controller start [QusController.getQusPaging()]
+[17:23:22.626:INFO :ServiceAdvice:39] >>>>> service start [QusService.selectQusPaging()] with GetQusIn(tagCd=null, pageNum=2, pageSize=15, orderBy=)
+[17:23:22.627:DEBUG:selectQusPaging_COUNT:137] ==>  Preparing: SELECT count(0) FROM daily.qus_qus_mst
+[17:23:22.627:DEBUG:selectQusPaging_COUNT:137] ==> Parameters: 
+[17:23:22.702:DEBUG:selectQusPaging_COUNT:137] <==      Total: 1
+[17:23:22.702:DEBUG:selectQusPaging:137] ==>  Preparing: select /* selectQusPaging @ qus @ 문제 목록 조회 */ qus_id , qus_title , qus_ctn , dif_cd , daily.getcdname('DIF_CD', dif_cd) as "difCdName" , tag_cd , daily.getcdname('TAG_CD', tag_cd) as "tagCdName" , use_yn , daily.getusername(create_user_id) as "createUserName" , update_dt , daily.getusername(update_user_id) as "updateUserName" , update_dt from daily.qus_qus_mst LIMIT ? OFFSET ?
+[17:23:22.703:DEBUG:selectQusPaging:137] ==> Parameters: 15(Integer), 15(Long)
+[17:23:22.749:DEBUG:selectQusPaging:137] <==      Total: 5
+[17:23:22.750:INFO :ServiceAdvice:48] <<<<<   service end [QusService.selectQusPaging()] [124 ms]
+[17:23:22.750:INFO :ControllerAdvice:63] <<<<<   controller end [QusController.getQusPaging()] [124 ms] 

@@ -14,6 +14,7 @@ class QusService : BaseService(){
     @Autowired lateinit var mapper: QusMapper
 
     fun selectQusPaging(input: GetQusIn): Paging<GetQusOut> {
+        startPaging(input.pageNum, input.pageSize, input.orderBy)
         return mapper.selectQusPaging(input).toPaging()
     }
 }

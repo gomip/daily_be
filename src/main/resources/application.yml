@@ -7,6 +7,7 @@ server:
 # Jasypt pwd
 app:
   passwordKey: sorkaksemsvmfpdla
+  issuer: gomip
 
 jasypt:
   encryptor:

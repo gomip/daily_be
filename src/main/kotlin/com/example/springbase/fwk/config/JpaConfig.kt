@@ -21,7 +21,7 @@ import javax.sql.DataSource
 
 @Configuration
 @EnableJpaRepositories(
-    basePackages = ["com.example.springbase.repo.jpa"],
+//    basePackages = ["com.example.springbase.repo.jpa"],
     entityManagerFactoryRef = "entityMangerFactory",
     transactionManagerRef = "transactionManger"
 )

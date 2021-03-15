@@ -26,9 +26,15 @@ class BaseConfig : WebMvcConfigurer{
             .resourceChain(false)
     }
 
+    /**
+     * origin : https://www.naver.com/port
+     * domain : naver.com
+     */
     override fun addCorsMappings(registry: CorsRegistry) {
         registry.addMapping("/**")                                                                            // 모든 요청 허용
             .allowedMethods("OPTIONS", "GET", "POST", "PATCH", "PUT", "DELETE")
+            .allowedOrigins("http://localhost:3001")                                                                               // 자원을 공유를 허락할 origin 지정
+            .maxAge(3600)
     }
 
     /*

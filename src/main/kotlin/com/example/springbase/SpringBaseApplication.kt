@@ -15,7 +15,6 @@ import kotlin.system.measureTimeMillis
 @SpringBootApplication(
     scanBasePackages = ["com.example.springbase"]
 )
-
 class SpringBaseApplication{
     companion object {
         private val log = LoggerFactory.getLogger(SpringBaseApplication::class.java) as Logger
