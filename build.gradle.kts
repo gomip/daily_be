@@ -21,6 +21,10 @@ dependencies {
     // spring --------------------------------------------------------------------------------------
     implementation("org.springframework.boot:spring-boot-starter-web")
 
+    // oauth ---------------------------------------------------------------------------------------
+    implementation("org.springframework.boot:spring-boot-starter-oauth2-client:2.4.3")
+    implementation("io.jsonwebtoken:jjwt:0.9.1")
+
     // aop -----------------------------------------------------------------------------------------
     implementation ("org.springframework.boot:spring-boot-starter-aop")
 
