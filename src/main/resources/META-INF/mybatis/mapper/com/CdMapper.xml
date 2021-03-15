@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.springbase.repo.mybatis.com.CdMapper">
+    <select id="selectCdList" resultType="GetCdOut">
+        select com_cd_id
+             , com_grp_cd
+             , com_cd
+             , com_cd_name
+             , expl
+             , use_yn
+             , daily.getusername(create_user_id) as "createUserName"
+             , create_dt
+             , daily.getusername(update_user_id) as "updateUserName"
+             , update_dt
+          from daily.com_com_cd
+         where 1=1
+    </select>
+</mapper>
