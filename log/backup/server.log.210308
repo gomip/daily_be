@@ -1,0 +1,124 @@
+[14:56:07.534:INFO :SpringBaseApplication$Companion:55] Starting SpringBaseApplication.Companion using Java 15.0.1 on junghoon.local with PID 45662 (/Users/kimjunghoon/tmp/personal/daily_be/build/classes/kotlin/main started by kimjunghoon in /Users/kimjunghoon/tmp/personal/daily_be)
+[14:56:07.535:DEBUG:SpringBaseApplication$Companion:56] Running with Spring Boot v2.4.1, Spring v5.3.2
+[14:56:07.535:INFO :SpringBaseApplication$Companion:664] The following profiles are active: local
+[14:56:08.399:INFO :EnableEncryptablePropertiesBeanFactoryPostProcessor:39] Post-processing PropertySource instances
+[14:56:08.414:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[14:56:08.415:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[14:56:08.416:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[14:56:08.416:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[14:56:08.416:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[14:56:08.417:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[14:56:08.417:INFO :EncryptablePropertySourceConverter:56] Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[14:56:08.447:INFO :DefaultLazyPropertyFilter:31] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[14:56:08.759:INFO :TomcatWebServer:108] Tomcat initialized with port(s): 5001 (http)
+[14:56:08.766:INFO :Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-5001"]
+[14:56:08.767:INFO :StandardService:173] Starting service [Tomcat]
+[14:56:08.767:INFO :StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.41]
+[14:56:08.840:INFO :[/]:173] Initializing Spring embedded WebApplicationContext
+[14:56:08.840:INFO :ServletWebServerApplicationContext:289] Root WebApplicationContext: initialization completed in 1267 ms
+[14:56:08.877:WARN :ServletFilter:26] ServletFilter] Initialize Called
+[14:56:08.901:INFO :DefaultLazyPropertyResolver:35] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[14:56:08.903:INFO :DefaultLazyPropertyDetector:35] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[14:56:08.930:INFO :JasyptConfig:26] =============     Jasypt Config Start =============
+[14:56:08.935:INFO :JasyptConfig:38] =============       Jasypt Config End =============
+[14:56:08.937:INFO :DefaultLazyEncryptor:32] Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@27358a19 with name: encryptorBean
+[14:56:08.980:INFO :DataSourceConfig:30] DataSource Config Start
+[14:56:08.983:INFO :DataSourceConfig:36] DataSource Config End
+[14:56:09.011:INFO :MybatisConfig:40] ===== MybatisConfig Start =====
+[14:56:09.013:INFO :MybatisConfig:47] =====   MybatisConfig End =====
+[14:56:09.124:INFO :MybatisConfig:53] ===== sqlSessionTemplate Start =====
+[14:56:09.126:INFO :MybatisConfig:55] =====   sqlSessionTemplate End =====
+[14:56:09.481:INFO :JpaConfig:39] ===== EntityManagerFactory Start =====
+[14:56:09.505:DEBUG:logging:152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[14:56:10.767:ERROR:HikariPool:593] HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at com.example.springbase.fwk.config.JpaConfig.entityMangerFactory(JpaConfig.kt:56)
+	at com.example.springbase.fwk.config.JpaConfig$$EnhancerBySpringCGLIB$$523d178e.CGLIB$entityMangerFactory$0(<generated>)
+	at com.example.springbase.fwk.config.JpaConfig$$EnhancerBySpringCGLIB$$523d178e$$FastClassBySpringCGLIB$$d529b4f6.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.example.springbase.fwk.config.JpaConfig$$EnhancerBySpringCGLIB$$523d178e.entityMangerFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.example.springbase.SpringBaseApplication$Companion.main(SpringBaseApplication.kt:57)
+	at com.example.springbase.SpringBaseApplication.main(SpringBaseApplication.kt)
+Caused by: java.net.UnknownHostException: database-1.c5cl6kmusbvm.ap-northeast-2.rds.amazonaws.com
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+	... 63 common frames omitted
+[14:56:10.869:INFO :LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[14:56:10.873:INFO :JpaConfig:58] =====   EntityManagerFactory End =====
+[14:56:10.887:INFO :JpaConfig:64] ===== TransactionManger Start =====
+[14:56:10.888:INFO :JpaConfig:66] =====   TransactionManger End =====
+[14:56:10.998:INFO :ThreadPoolTaskExecutor:181] Initializing ExecutorService 'applicationTaskExecutor'
+[14:56:11.272:INFO :Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-5001"]
+[14:56:11.288:INFO :TomcatWebServer:220] Tomcat started on port(s): 5001 (http) with context path ''
+[14:56:11.503:DEBUG:Validator:24] ERROR [ModelSpecification.spec] At least one type of specification is required
+[14:56:11.521:INFO :SpringBaseApplication$Companion:61] Started SpringBaseApplication.Companion in 4.298 seconds (JVM running for 7.819)
+[14:56:11.524:INFO :SpringBaseApplication:34] =============     Check Profile START =============
+[14:56:11.525:INFO :SpringBaseApplication:36] local
+[14:56:11.525:INFO :SpringBaseApplication:37] =============       Check Profile End ============= : activate profile count: 1
+[14:56:11.525:INFO :SpringBaseApplication:40] ============= Check Loaded Bean START =============
+[14:56:11.525:INFO :SpringBaseApplication:41] Loaded Bean : 373
+[14:56:11.525:INFO :SpringBaseApplication:42] =============   Check Loaded Bean END =============
+[14:56:11.525:INFO :SpringBaseApplication:44] =============             AppMain End ============= : 4403 ms
+[17:20:03.140:INFO :ThreadPoolTaskExecutor:218] Shutting down ExecutorService 'applicationTaskExecutor'

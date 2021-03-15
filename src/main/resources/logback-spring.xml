@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="3 seconds">
+
+    <!-- To enable JMX Management -->
+    <jmxConfigurator/>
+
+    <!--
+       Property
+     -->
+    <property name="logHome" value="./log/"/>
+    <property name="logHomeBackup" value="./log/backup/"/>
+    <timestamp key="bySecond" datePattern="yyyyMMddHHmmss"/>
+
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+
+    <!--
+       Console Appender
+     -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <withJansi>true</withJansi>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>[%d{HH:mm:ss.SSS}:%highlight(%-5p):%cyan(%c):%-5L] %m%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="asyncConsole" class="ch.qos.logback.classic.AsyncAppender" includeCallerData="true">
+        <discardingThreshold>0</discardingThreshold>
+        <queueSize>10000</queueSize>
+        <maxFlushTime>60000</maxFlushTime>
+        <appender-ref ref="console"/>
+    </appender>
+
+    <!--
+        File Appender - Server Log
+     -->
+    <appender name="appenderServer" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logHome}server.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logHomeBackup}server.log.%d{yyMMdd}</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <springProfile name="local">
+                <pattern>[%d{HH:mm:ss.SSS}:%-5p:%c{0}:%L] %m%n</pattern>
+            </springProfile>
+            <springProfile name="!local">
+                <pattern>[%d{HH:mm:ss.SSS}:%-5p:%c{0}] %m%n</pattern>
+            </springProfile>
+        </encoder>
+        <param name="MaxBackupIndex" value="4"/>
+    </appender>
+    <appender name="asyncAppenderServer" class="ch.qos.logback.classic.AsyncAppender" includeCallerData="true">
+        <discardingThreshold>0</discardingThreshold>
+        <queueSize>10000</queueSize>
+        <maxFlushTime>60000</maxFlushTime>
+        <appender-ref ref="appenderServer"/>
+    </appender>
+
+    <!--
+        File Appender - Error Log
+     -->
+    <appender name="appenderError" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logHome}error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logHomeBackup}error.log.%d{yyMMdd}</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>[%d{HH:mm:ss.SSS}:%c] %m%n</pattern>
+        </encoder>
+        <param name="MaxBackupIndex" value="4"/>
+    </appender>
+
+    <!--
+        Batch Appender
+     -->
+    <appender name="appenderBatch" class="ch.qos.logback.classic.sift.SiftingAppender">
+
+        <!-- MDC Value -->
+        <discriminator>
+            <key>logFileName</key>
+            <defaultValue>batch</defaultValue>
+        </discriminator>
+
+        <sift>
+            <!-- A standard RollingFileAppender, the log file is based on 'logFileName' at runtime  -->
+            <appender name="${logFileName}" class="ch.qos.logback.core.FileAppender">
+                <file>${logHome}batch/${logFileName}.log</file>
+                <encoder>
+                    <charset>UTF-8</charset>
+                    <pattern>[%d{HH:mm:ss.SSS}:%p:%L] %m%n</pattern>
+                </encoder>
+            </appender>
+        </sift>
+
+    </appender>
+
+    <!--
+       SQL Appender
+     -->
+    <appender name="appenderSql" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logHome}/sql.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logHomeBackup}/sql.log.%d{yyMMdd}</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>[%d{HH:mm:ss.SSS}:%p:%c{5}:%L] %m%n</pattern>
+        </encoder>
+        <param name="MaxBackupIndex" value="4"/>
+    </appender>
+    <appender name="asyncAppenderSql" class="ch.qos.logback.classic.AsyncAppender" includeCallerData="true">
+        <appender-ref ref="appenderSql"/>
+    </appender>
+
+    <!--
+       Service Appender
+     -->
+    <appender name="appenderService" class="ch.qos.logback.classic.sift.SiftingAppender">
+
+        <!-- MDC Value -->
+        <discriminator>
+            <key>logServiceFileName</key>
+            <defaultValue>service</defaultValue>
+        </discriminator>
+
+        <sift>
+            <!-- A standard RollingFileAppender, the log file is based on 'logFileName' at runtime  -->
+            <appender name="${logServiceFileName}" class="ch.qos.logback.core.FileAppender">
+                <file>${logHome}service/${logServiceFileName}</file>
+                <encoder>
+                    <charset>UTF-8</charset>
+                    <pattern>[%d{HH:mm:ss.sss}:%c{0}:%L] %m%n</pattern>
+                </encoder>
+                <maxHistory>4</maxHistory>
+            </appender>
+        </sift>
+
+    </appender>
+    <appender name="asyncAppenderService" class="ch.qos.logback.classic.AsyncAppender" includeCallerData="true">
+        <discardingThreshold>0</discardingThreshold>
+        <queueSize>10000</queueSize>
+        <maxFlushTime>60000</maxFlushTime>
+        <appender-ref ref="appenderService"/>
+    </appender>
+
+    <!--
+        3rd party
+     -->
+    <logger name="org.springframework" level="info"/>
+    <logger name="org.springframework.boot.autoconfigure" level="error"/>
+    <logger name="org.apache" level="info"/>
+    <logger name="org.apache.ibatis" level="error" additivity="true"/>
+    <logger name="org.mybatis" level="error" additivity="true"/>
+    <logger name="org.springframework.beans" level="info" additivity="false"/>
+    <logger name="org.springframework.data" level="info" additivity="false"/>
+    <logger name="com.amazonaws" level="info" additivity="false"/>
+    <logger name="org.mongodb.driver" level="info" additivity="false"/>
+    <logger name="springfox.documentation" level="error"/>
+    <logger name="org.hibernate" level="error"/>
+    <logger name="de.codecentric.boot.admin.server.services.IntervalCheck" level="info"/>
+    <logger name="javax.management" level="info"/>
+    <logger name="org.hibernate.hql.internal.QueryTranslatorFactoryInitiator" level="error"/>
+    <logger name="com.github.jknack.handlebars.internal.HbsParserFactory" level="error"/>
+    <logger name="com.github.jknack.handlebars.springmvc" level="error"/>
+    <logger name="io.netty" level="error"/>
+    <logger name="reactor" level="info"/>
+    <logger name="org.reflections.Reflections" level="info"/>
+    <logger name="org.postgresql" level="error"/>
+
+    <!--
+        About DB
+     -->
+    <logger name="org.mybatis.spring.SqlSessionUtils" level="info"/>
+    <logger name="org.mybatis.spring.transaction.SpringManagedTransaction" level="info"/>
+    <logger name="org.mybatis.spring.transaction" level="info"/>
+    <logger name="com.zaxxer.hikari.HikariDataSource" level="error"/>
+    <logger name="com.zaxxer.hikari.pool" level="error"/>
+    <logger name="com.zaxxer.hikari.HikariConfig" level="error"/>
+    <logger name="com.zaxxer.hikari" level="error"/>
+    <logger name="org.hibernate.sql" level="debug"/>
+    <logger name="org.hibernate.type" level="info"/>
+
+    <!--
+       MyBatis Query: Repository 쿼리를 볼 때 DEBUG 이하로 낮춥니다.
+     -->
+    <springProfile name="local">
+        <logger name="kr.co.rsquare.frame.repo" level="info" additivity="false">
+            <appender-ref ref="appenderSql"/>
+        </logger>
+    </springProfile>
+    <springProfile name="sqlInfo">
+        <logger name="kr.co.rsquare.frame.repo" level="debug" additivity="false">
+            <appender-ref ref="appenderSql"/>
+        </logger>
+    </springProfile>
+    <springProfile name="dev">
+        <logger name="kr.co.rsquare.frame.repo" level="debug" additivity="true">
+            <appender-ref ref="asyncAppenderSql"/>
+        </logger>
+    </springProfile>
+    <springProfile name="prd">
+        <logger name="kr.co.rsquare.frame.repo" level="debug" additivity="false">
+            <appender-ref ref="asyncAppenderSql"/>
+        </logger>
+    </springProfile>
+<!--    <logger name="kr.co.rsquare.frame.repo.mybatis.fwk" level="error" additivity="false"/>-->
+
+    <!--
+        Redis Log
+    -->
+<!--    <logger name="io.lettuce.core" level="error" additivity="false"/>-->
+
+    <!--
+        Frame Service Log
+    -->
+    <logger name="kr.co.rsquare.frame.part.service" level="debug" additivity="true"> <appender-ref ref="appenderService"/> </logger>
+
+    <springProfile name="dev">
+        <logger name="kr.co.rsquare.frame.part.service" level="debug" additivity="true"> <appender-ref ref="appenderService"/> </logger>
+    </springProfile>
+
+    <springProfile name="prd">
+        <logger name="kr.co.rsquare.frame.part.service" level="debug" additivity="true"> <appender-ref ref="appenderService"/> </logger>
+    </springProfile>
+
+    <!--
+       Custom Log
+     -->
+    <logger name="fileError" level="error" additivity="true"> <appender-ref ref="appenderError"/> </logger>
+    <logger name="eachService" level="debug" additivity="true"> <appender-ref ref="asyncAppenderService"/> </logger>
+    <springProfile name="dev,prd">
+        <logger name="eachService" level="debug" additivity="false"> <appender-ref ref="asyncAppenderService"/> </logger>
+    </springProfile>
+    <logger name="eachBatch" level="debug" additivity="true"> <appender-ref ref="appenderBatch"/> </logger>
+
+    <!--
+       ROOT
+     -->
+    <springProfile name="local">
+        <root level="debug">
+            <appender-ref ref="console"/>
+            <appender-ref ref="appenderServer"/>
+        </root>
+    </springProfile>
+    <springProfile name="dev">
+        <root level="debug">
+            <appender-ref ref="asyncConsole"/>
+            <appender-ref ref="appenderServer"/>
+        </root>
+    </springProfile>
+    <springProfile name="prd">
+        <root level="info">
+            <appender-ref ref="asyncConsole"/>
+            <appender-ref ref="asyncAppenderServer"/>
+        </root>
+    </springProfile>
+
+
+</configuration>
