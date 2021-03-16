@@ -1,13 +1,23 @@
 package com.example.springbase.fwk.config
 
 import io.swagger.annotations.ApiOperation
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
+import org.springframework.context.annotation.Lazy
+import org.springframework.context.annotation.Profile
 import org.springframework.core.annotation.Order
 import org.springframework.stereotype.Component
 import org.springframework.util.StringUtils
+import springfox.documentation.builders.ApiInfoBuilder
+import springfox.documentation.builders.PathSelectors
+import springfox.documentation.builders.RequestHandlerSelectors
+import springfox.documentation.service.ApiInfo
 import springfox.documentation.spi.DocumentationType
 import springfox.documentation.spi.service.OperationBuilderPlugin
 import springfox.documentation.spi.service.contexts.OperationContext
+import springfox.documentation.spring.web.plugins.Docket
 import springfox.documentation.swagger.common.SwaggerPluginSupport
+import springfox.documentation.swagger2.annotations.EnableSwagger2
 
 /**
  * 2021.01.11 | gomip | created

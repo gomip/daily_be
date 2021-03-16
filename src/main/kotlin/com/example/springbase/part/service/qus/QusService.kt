@@ -14,7 +14,16 @@ class QusService : BaseService(){
     @Autowired lateinit var mapper: QusMapper
 
     fun selectQusPaging(input: GetQusIn): Paging<GetQusOut> {
+        var tagCdList = listOf<String>()
+        if (input.tagCd != null) {
+            tagCdList = input.tagCd!!.split(",")
+        }
+        var difCdList = listOf<String>()
+        if (input.difCd != null) {
+            difCdList = input.difCd!!.split(",")
+        }
+
         startPaging(input.pageNum, input.pageSize, input.orderBy)
-        return mapper.selectQusPaging(input).toPaging()
+        return mapper.selectQusPaging(input, difCdList, tagCdList).toPaging()
     }
 }

@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository
  */
 @Repository
 interface QusMapper {
-    fun selectQusPaging(input: GetQusIn) : Page<GetQusOut>
+    fun selectQusPaging(input: GetQusIn, difCdList: List<String>, tagCdList: List<String>) : Page<GetQusOut>
 }

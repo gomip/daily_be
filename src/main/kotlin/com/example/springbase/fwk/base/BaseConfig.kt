@@ -19,11 +19,12 @@ import org.springframework.web.servlet.config.annotation.*
 @EnableTransactionManagement                                                                                            // 트랜잭션 활성화
 class BaseConfig : WebMvcConfigurer{
     override fun addResourceHandlers(registry: ResourceHandlerRegistry) {                                               // swagger URI 설정
-        super.addResourceHandlers(registry)
 
         registry.addResourceHandler("/swagger-ui/**")
-            .addResourceLocations("classpath:/META-INF/resources/webjars/springfox-swagger-ui/")         // v파일 위치
+//            .addResourceLocations("classpath:/META-INF/resources/webjars/springfox-swagger-ui/")         // v파일 위치
             .resourceChain(false)
+
+        super.addResourceHandlers(registry)
     }
 
     /**

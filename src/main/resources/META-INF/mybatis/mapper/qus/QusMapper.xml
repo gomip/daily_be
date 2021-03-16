@@ -17,5 +17,18 @@
              , daily.getusername(update_user_id) as "updateUserName"
              , update_dt
           from daily.qus_qus_mst
+         where 1=1
+<!--         <if test="difCdList != null and difCdList.size != 0">-->
+<!--             and dif_cd in-->
+<!--                <foreach collection="difCdList" item="item" open="(" close=")" separator=",">-->
+<!--                    #{item}-->
+<!--                </foreach>-->
+<!--         </if>-->
+<!--        <if test="tagCdList != null and tagCdList.size != 0">-->
+<!--            and tag_cd in-->
+<!--            <foreach collection="tagCdList" item="item" open="(" close=")" separator=",">-->
+<!--                #{item}-->
+<!--            </foreach>-->
+<!--        </if>-->
     </select>
 </mapper>
