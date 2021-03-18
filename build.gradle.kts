@@ -23,13 +23,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-configuration-processor:2.4.3")
 
     // oauth ---------------------------------------------------------------------------------------
-    implementation("com.google.api-client:google-api-client:1.31.3")
-    implementation("com.google.auth:google-auth-library-oauth2-http:0.24.1")
-    implementation("com.google.apis:google-api-services-oauth2:v2-rev157-1.25.0")
-    implementation("com.auth0:java-jwt:3.14.0")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.2")
-    implementation("com.google.http-client:google-http-client-jackson2:1.39.0")
-
+    implementation("org.springframework.security:spring-security-oauth2-client:5.4.5")
+    implementation("org.springframework.security:spring-security-oauth2-jose:5.4.5")
+    implementation("org.springframework.boot:spring-boot-starter-oauth2-client:2.4.3")
     // aop -----------------------------------------------------------------------------------------
     implementation ("org.springframework.boot:spring-boot-starter-aop")
 

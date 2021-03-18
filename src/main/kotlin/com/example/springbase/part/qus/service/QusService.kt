@@ -1,10 +1,10 @@
-package com.example.springbase.part.service.qus
+package com.example.springbase.part.qus.service
 
 import com.example.springbase.custom.model.pojo.Paging
 import com.example.springbase.fwk.base.BaseService
 import com.example.springbase.lib.custom.toPaging
-import com.example.springbase.part.dto.qus.GetQusIn
-import com.example.springbase.part.dto.qus.GetQusOut
+import com.example.springbase.part.qus.dto.GetQusIn
+import com.example.springbase.part.qus.dto.GetQusOut
 import com.example.springbase.repo.mybatis.qus.QusMapper
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service

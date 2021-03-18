@@ -1,4 +1,4 @@
-package com.example.springbase.part.dto.com
+package com.example.springbase.part.com.dto
 
 import java.time.OffsetDateTime
 

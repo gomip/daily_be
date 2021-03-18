@@ -1,6 +1,6 @@
 package com.example.springbase.repo.mybatis.com
 
-import com.example.springbase.part.dto.com.ComUserMix
+import com.example.springbase.part.com.dto.ComUserMix
 import org.springframework.stereotype.Repository
 
 /**

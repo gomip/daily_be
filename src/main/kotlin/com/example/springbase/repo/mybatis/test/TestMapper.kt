@@ -1,8 +1,7 @@
 package com.example.springbase.repo.mybatis.test
 
-import com.example.springbase.part.dto.com.GetUserOut
-import com.example.springbase.part.dto.test.GetTestOut
-import com.example.springbase.part.dto.test.PostTestIn
+import com.example.springbase.part.com.dto.GetUserOut
+import com.example.springbase.part.test.dto.PostTestIn
 import org.springframework.stereotype.Repository
 
 /**

@@ -1,4 +1,4 @@
-package com.example.springbase.part.dto.qus
+package com.example.springbase.part.qus.dto
 
 /**
  * 2021.03.12 | gomip | created

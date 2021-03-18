@@ -14,7 +14,9 @@
     <typeAliases>
         <typeAlias alias="HashMap" type="java.util.HashMap" />
         <typeAlias alias="List" type="java.util.List" />
-        <package name="com.example.springbase.part.dto"/>
+        <package name="com.example.springbase.part.com.dto"/>
+        <package name="com.example.springbase.part.qus.dto"/>
+        <package name="com.example.springbase.part.test.dto"/>
     </typeAliases>
 
     <typeHandlers>

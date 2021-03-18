@@ -1,4 +1,4 @@
-package com.example.springbase.part.dto.test
+package com.example.springbase.part.test.dto
 
 data class PostTestIn (
         var id: Int = 0,

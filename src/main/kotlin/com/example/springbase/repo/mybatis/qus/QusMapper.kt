@@ -1,7 +1,7 @@
 package com.example.springbase.repo.mybatis.qus
 
-import com.example.springbase.part.dto.qus.GetQusIn
-import com.example.springbase.part.dto.qus.GetQusOut
+import com.example.springbase.part.qus.dto.GetQusIn
+import com.example.springbase.part.qus.dto.GetQusOut
 import com.github.pagehelper.Page
 import org.springframework.stereotype.Repository
 

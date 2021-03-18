@@ -1,4 +1,4 @@
-package com.example.springbase.part.dto.qus
+package com.example.springbase.part.qus.dto
 
 import java.time.OffsetDateTime
 

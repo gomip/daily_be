@@ -1,4 +1,4 @@
-package com.example.springbase.part.dto.test
+package com.example.springbase.part.test.dto
 
 /**
  * 2021.01.05 | gomip | created

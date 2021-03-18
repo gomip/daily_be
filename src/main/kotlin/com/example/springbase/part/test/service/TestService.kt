@@ -1,9 +1,8 @@
-package com.example.springbase.part.service.test
+package com.example.springbase.part.test.service
 
 import com.example.springbase.fwk.base.BaseService
-import com.example.springbase.part.dto.com.GetUserOut
-import com.example.springbase.part.dto.test.GetTestOut
-import com.example.springbase.part.dto.test.PostTestIn
+import com.example.springbase.part.com.dto.GetUserOut
+import com.example.springbase.part.test.dto.PostTestIn
 import com.example.springbase.repo.mybatis.test.TestMapper
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -14,7 +13,7 @@ import org.springframework.stereotype.Service
 @Service
 class TestService : BaseService(){
     @Autowired lateinit var mapper: TestMapper
-    fun testService() : GetUserOut{
+    fun testService() : GetUserOut {
         val res = mapper.selectTestOne()
         return res
     }

@@ -1,7 +1,7 @@
-package com.example.springbase.part.service.com
+package com.example.springbase.part.com.service
 
 import com.example.springbase.fwk.base.BaseService
-import com.example.springbase.part.dto.com.GetCdOut
+import com.example.springbase.part.com.dto.GetCdOut
 import com.example.springbase.repo.mybatis.com.CdMapper
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service

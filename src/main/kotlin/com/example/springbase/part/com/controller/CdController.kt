@@ -1,8 +1,8 @@
-package com.example.springbase.part.controller.com
+package com.example.springbase.part.com.controller
 
 import com.example.springbase.fwk.base.BaseController
-import com.example.springbase.part.dto.com.GetCdOut
-import com.example.springbase.part.service.com.CdService
+import com.example.springbase.part.com.dto.GetCdOut
+import com.example.springbase.part.com.service.CdService
 import io.swagger.annotations.ApiOperation
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping

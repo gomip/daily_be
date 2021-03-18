@@ -1,6 +1,6 @@
 package com.example.springbase.repo.mybatis.com
 
-import com.example.springbase.part.dto.com.GetCdOut
+import com.example.springbase.part.com.dto.GetCdOut
 import org.springframework.stereotype.Repository
 
 @Repository

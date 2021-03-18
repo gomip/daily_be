@@ -1,10 +1,9 @@
-package com.example.springbase.part.controller.test
+package com.example.springbase.part.test.controller
 
 import com.example.springbase.fwk.base.BaseController
-import com.example.springbase.part.dto.com.GetUserOut
-import com.example.springbase.part.dto.test.GetTestOut
-import com.example.springbase.part.dto.test.PostTestIn
-import com.example.springbase.part.service.test.TestService
+import com.example.springbase.part.com.dto.GetUserOut
+import com.example.springbase.part.test.dto.PostTestIn
+import com.example.springbase.part.test.service.TestService
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
 import org.springframework.beans.factory.annotation.Autowired
