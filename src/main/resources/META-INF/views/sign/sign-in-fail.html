@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<!--/*@thymesVar id="errMsg" type="String? = null"*/-->
+<!--/*@thymesVar id="errCd" type="String? = null"*/-->
+<!--/*@thymesVar id="redirectUri" type="String? = null"*/-->
+
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/static/css/main.css}" type="text/css"/>
+</th:block>
+
+<div class="sign-in-fail">
+    <div class="sign-in-fail-contents">
+        <div class="contents-title">Login Error</div>
+        <div class="contents-sub-title" th:text="${errMsg}"></div>
+        <div class="contents" th:text="${errCd}"></div>
+        <a th:href="${redirectUri}" class="sign-in-fail-area">
+            <input class="sign-in-fail-btn" type="button" value="뒤로 돌아가기">
+        </a>
+    </div>
+
+</div>
+</html>

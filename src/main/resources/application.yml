@@ -41,3 +41,7 @@ logging:
           descriptor:
             sql:
               BasicBinder: TRACE                                                                    # SQL에서 ?로 표시된 부분을 로그로 출력해서 확인 가능
+oauth:
+  google:
+    callbackUrl: "http://localhost:5001/auth/google/callback"
+    userInfoEndpoint: "https://www.googleapis.com/plus/v1/people/me/openIdConnect"

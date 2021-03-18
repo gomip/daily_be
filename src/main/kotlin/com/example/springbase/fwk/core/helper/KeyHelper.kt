@@ -1,10 +1,12 @@
+@file:Suppress("EnumEntryName")
+
 package com.example.springbase.fwk.core.helper
 
 interface KeyHelper {
     fun get(keyName: Key): String
 }
 
-enum class Key{
+enum class Key {
     test,
     oauthGoogleClientId,
     oauthGoogleClientSecret,
@@ -14,4 +16,8 @@ enum class Key{
     dbJpaManagePassword,
     dbJpaLegacyUserName,
     dbJpaLegacyPassword,
+    dbMybatisManageUserName,
+    dbMybatisManagePassword,
+    flywayUser,
+    flywayPassword
 }
