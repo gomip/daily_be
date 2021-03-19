@@ -4,6 +4,7 @@ import com.auth0.jwt.JWT
 import com.auth0.jwt.JWTVerifier
 import com.auth0.jwt.algorithms.Algorithm
 import com.auth0.jwt.exceptions.JWTCreationException
+import com.auth0.jwt.exceptions.JWTDecodeException
 import com.auth0.jwt.interfaces.DecodedJWT
 import com.example.springbase.fwk.base.BaseService
 import com.example.springbase.lib.model.entity.redis.ComUser
@@ -89,7 +90,6 @@ class AuthService(
                 .setRedirectUri(callbackUrl)
                 .execute()
 
-            log.debug("token : $tokenResponse")
             val credential = googleAuthFlow().createAndStoreCredential(tokenResponse, null)
             val requestFactory = httpTransport.createRequestFactory(credential)
 //            val url = GenericUrl(commons.oauthGoogleConstants.userInfoEndpoint)
@@ -130,7 +130,6 @@ class AuthService(
     fun sign(email: String, picture: String?) : ComUserMix{
         try {
             var comUserMix = mapperUser.selectUserByEmail(email)
-
             if (comUserMix == null) {
                 throw Exception("사용자가 존재하지 않습니다.")
             }
@@ -139,7 +138,7 @@ class AuthService(
             val jwt = JWT.create()
                 .withIssuer("gomip-dev")
                 .withClaim("email", comUserMix.email)
-                .withClaim("userName", comUserMix.userName)
+                .withClaim("userId", comUserMix.userId)
                 .withIssuedAt(DateUtils.nowDate())
                 .withExpiresAt(DateUtils.fromLocalDateTimeToDate(DateUtils.now().plusDays(2)))
                 .sign(algorithm)
@@ -161,7 +160,6 @@ class AuthService(
             email = inComUserMix.email,
             jwt = inComUserMix.jwt
         )
-        log.debug("user: $user")
         commons.area.user = user
         commons.area.bLogin = true
     }
@@ -181,5 +179,31 @@ class AuthService(
             log.error("구글 프로파일 요청중 오류 발생")
             throw e
         }
+    }
+
+    /**
+     * 유효한 토큰인지 확인
+     */
+    fun isValidToken(jwt: String) : Boolean{
+        return try{
+            if (jwt == null) return false
+            verifier.verify(removeBearerSignature(jwt))
+            true
+        } catch (e: JWTDecodeException) {
+            false
+        } catch (e: Exception) {
+            false
+        }
+    }
+
+    /**
+     * jwt 에서 BEARER 문자열 제거
+     */
+    private fun removeBearerSignature(jwt: String) : String{
+        var token = jwt
+        if (jwt.startsWith("Bearer")) {
+            token = jwt.replace("Bearer".toRegex(), "").trim{it <= ' '}
+        }
+        return token
     }
 }

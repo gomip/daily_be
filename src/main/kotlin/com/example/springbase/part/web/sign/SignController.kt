@@ -26,6 +26,7 @@ class SignController(
     ): RedirectView {
         val state = "$redirectUri&$appName"
         val googleUri = serviceAuth.makeGoogleOAuthRequest(callbackUrl, state)
+
         return RedirectView(googleUri)
     }
 

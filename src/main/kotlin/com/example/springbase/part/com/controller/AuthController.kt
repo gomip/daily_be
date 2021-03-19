@@ -20,7 +20,7 @@ class AuthController : BaseController(){
     fun signIn(): String {
         // Init ------------------------------------------------------------------------------------
         val accessToken = request.getHeader("Authorization")
-        log.debug("access token : $accessToken")
+//        log.debug("access token : $accessToken")
 
         if (accessToken == null) {
             log.error("access-token이 전달되지 않았습니다")
@@ -28,7 +28,6 @@ class AuthController : BaseController(){
 
         try {
             val profile = serviceAuth.getGoogleProfileByAccessToken(accessToken)                    // 구글 사용자 정보 조회
-
             val comUserMix = serviceAuth.sign(profile.email, profile.picture)
             serviceAuth.setCommonAreaUser(comUserMix)
             val json = JSONObject()
@@ -54,10 +53,11 @@ class AuthController : BaseController(){
         val appName = splitString[1]
 
         try{
-            log.debug("code: $code")
             val googleUser = serviceAuth.googleCallback(code)
             val comUserMix = serviceAuth.sign(googleUser.email, googleUser.picture)
+            serviceAuth.setCommonAreaUser(comUserMix)
             redirectUri += "#access_token=${comUserMix.jwt}"
+
             return RedirectView(redirectUri)
         } catch (e: Exception) {
             val apiHost = "http://localhost:5001"
@@ -67,6 +67,15 @@ class AuthController : BaseController(){
             val failRedirectUri = "$apiHost/web/sign-in/fail?err_msg=$errMsg&err_cd=$errCd&redirect_url=${redirectUri}"
             log.info("redirectUri : $failRedirectUri")
             return RedirectView(failRedirectUri)
+        }
+    }
+
+    @GetMapping("/verify")
+    fun verifyToken(token: String): String{
+        return if (serviceAuth.isValidToken(token)) {
+            "Y"
+        } else {
+            "N"
         }
     }
 }

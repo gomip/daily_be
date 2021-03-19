@@ -11,7 +11,6 @@ class CdService : BaseService(){
     @Autowired lateinit var mapper: CdMapper
 
     fun selectCdList(): List<GetCdOut> {
-        log.debug("im here", commons.area.user?.userId)
         return mapper.selectCdList()
     }
 }
