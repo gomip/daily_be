@@ -55,7 +55,9 @@ dependencies {
     implementation("org.postgresql:postgresql:42.2.18")
 
     // swagger -------------------------------------------------------------------------------------
-    implementation("io.springfox:springfox-boot-starter:3.0.0")
+//    implementation("io.springfox:springfox-boot-starter:3.0.0")
+    implementation("io.springfox:springfox-swagger2:2.9.2")
+    implementation("io.springfox:springfox-swagger-ui:2.9.2")
 
     // log -----------------------------------------------------------------------------------------
     implementation("ch.qos.logback:logback-classic")

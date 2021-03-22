@@ -8,6 +8,7 @@ server:
 app:
   passwordKey: sorkaksemsvmfpdla
   issuer: gomip
+  version: v210301a
 
 jasypt:
   encryptor:

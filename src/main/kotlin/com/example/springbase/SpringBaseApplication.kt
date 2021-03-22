@@ -24,11 +24,13 @@ class SpringBaseApplication{
             try{
                 val elapsed = measureTimeMillis {
                     log.info("=============           AppMain START =============")
+                    log.debug("1")
                     // main start ------------------------------------------------------------------------------------------
                     val app = runApplication<SpringBaseApplication>(*args) {
                         setBannerMode(Banner.Mode.OFF)
                     }
 
+                    log.debug("3")
                     // profile check ---------------------------------------------------------------------------------------
                     log.info("=============     Check Profile START =============")
                     val env = app.getBean("environment") as Environment

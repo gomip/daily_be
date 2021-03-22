@@ -14,33 +14,6 @@ import java.net.URLEncoder
 @Api(description = "인증(로그인)")
 class AuthController : BaseController(){
     @Autowired lateinit var serviceAuth: AuthService
-
-    @PostMapping("/sign-in/google", produces = ["application/json"])
-    @ResponseBody
-    fun signIn(): String {
-        // Init ------------------------------------------------------------------------------------
-        val accessToken = request.getHeader("Authorization")
-//        log.debug("access token : $accessToken")
-
-        if (accessToken == null) {
-            log.error("access-token이 전달되지 않았습니다")
-        }
-
-        try {
-            val profile = serviceAuth.getGoogleProfileByAccessToken(accessToken)                    // 구글 사용자 정보 조회
-            val comUserMix = serviceAuth.sign(profile.email, profile.picture)
-            serviceAuth.setCommonAreaUser(comUserMix)
-            val json = JSONObject()
-            json.put("jwt", comUserMix.jwt)
-
-            return json.toString()
-
-        } catch (e: Exception) {
-            log.error("로그인 처리중 에러가 발생했습니다.")
-            throw e
-        }
-    }
-
     /**
      * 구글 로그인 callback
      * state는 signController.signIn()에서 조립한 redirect URL + App Name
@@ -55,7 +28,6 @@ class AuthController : BaseController(){
         try{
             val googleUser = serviceAuth.googleCallback(code)
             val comUserMix = serviceAuth.sign(googleUser.email, googleUser.picture)
-            serviceAuth.setCommonAreaUser(comUserMix)
             redirectUri += "#access_token=${comUserMix.jwt}"
 
             return RedirectView(redirectUri)
@@ -72,6 +44,7 @@ class AuthController : BaseController(){
 
     @GetMapping("/verify")
     fun verifyToken(token: String): String{
+        log.debug("im here")
         return if (serviceAuth.isValidToken(token)) {
             "Y"
         } else {

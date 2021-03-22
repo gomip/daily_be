@@ -21,7 +21,7 @@ class BaseConfig : WebMvcConfigurer{
     override fun addResourceHandlers(registry: ResourceHandlerRegistry) {                                               // swagger URI 설정
 
         registry.addResourceHandler("/swagger-ui/**")
-//            .addResourceLocations("classpath:/META-INF/resources/webjars/springfox-swagger-ui/")         // v파일 위치
+            .addResourceLocations("classpath:/META-INF/resources/webjars/springfox-swagger-ui/")         // v파일 위치
             .resourceChain(false)
 
         super.addResourceHandlers(registry)
@@ -34,6 +34,9 @@ class BaseConfig : WebMvcConfigurer{
     override fun addCorsMappings(registry: CorsRegistry) {
         registry.addMapping("/**")                                                                            // 모든 요청 허용
             .allowedMethods("OPTIONS", "GET", "POST", "PATCH", "PUT", "DELETE")
+            .allowedHeaders("Access-Token", "Authorization", "Content-Type", "Access-Control-Expose-Headers", "x-api-keys")
+            .allowedHeaders("*")
+            .exposedHeaders("Content-Disposition")
             .allowedOrigins("http://localhost:3001")                                                                               // 자원을 공유를 허락할 origin 지정
             .maxAge(3600)
     }

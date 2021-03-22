@@ -187,7 +187,9 @@ class AuthService(
     fun isValidToken(jwt: String) : Boolean{
         return try{
             if (jwt == null) return false
+            log.debug("jwt : $jwt")
             verifier.verify(removeBearerSignature(jwt))
+            log.debug("jwt : ${verifier.verify(removeBearerSignature(jwt))}")
             true
         } catch (e: JWTDecodeException) {
             false
@@ -205,5 +207,19 @@ class AuthService(
             token = jwt.replace("Bearer".toRegex(), "").trim{it <= ' '}
         }
         return token
+    }
+
+    fun decodeToken(jwt: String) : ComUser? {
+        if (!isValidToken(jwt))
+            return null
+        val decoded = verifier.verify(removeBearerSignature(jwt))
+        val userId = decoded.getClaim("userId").asString()
+        val email = decoded.getClaim("email").asString()
+
+        return ComUser(
+            userId = userId,
+            email = email,
+            jwt = jwt
+        )
     }
 }
