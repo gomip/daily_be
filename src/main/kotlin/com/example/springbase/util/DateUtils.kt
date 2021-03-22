@@ -67,4 +67,22 @@ object DateUtils {
         }
         return ""
     }
+    fun parseDate(date: String): Date {
+        try {
+            return SimpleDateFormat("yyyy-MM-dd").parse(date)
+        } catch (e: ParseException) {
+            throw e
+//            throw BadRequestException("MSG001420", listOf(date)) // Date 날짜 형식이 잘못되었습니다. [value: {0}]
+        }
+    }
+
+    fun parseDateTime(dateTime: String): OffsetDateTime {
+        try {
+            return OffsetDateTime.parse(dateTime)
+        } catch (e: DateTimeParseException) {
+            throw e
+//            throw BadRequestException("MSG001421", listOf(dateTime)) // DateTime 날짜 형식이 잘못되었습니다. [value: {0}]
+        }
+    }
+
 }

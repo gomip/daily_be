@@ -16,4 +16,42 @@
           from daily.com_com_cd
          where 1=1
     </select>
+
+    <select id="selectGrpCdListForDic" resultType="ComComGrpCd">
+        select /* selectGrpCdListForDic @ com @ 딕셔너리용 그룹코드 조회 */
+               a.com_grp_cd
+             , a.com_grp_cd_name
+             , a.cd_max_len
+             , a.expl
+          from daily.com_com_grp_cd a                                                               /* T. 공통그룹코드 */
+         where 1=1
+           and use_yn = 'Y'
+    </select>
+
+    <select id="selectAllCdListWithGrpCd" resultType="SelectCdListWithGrpCdOut">
+        select /* selectAllCdListWithGrpCd @ com @ 공통코드 with 그룹코드 조회 */
+               a.com_grp_cd
+             , a.com_grp_cd_name
+             , a.cd_max_len
+             , a.expl               as "grp_expl"
+             , a.use_yn             as "grp_use_yn"
+             , a.create_user_id     as "grp_create_user_id"
+             , a.create_dt          as "grp_create_dt"
+             , a.update_user_id     as "grp_update_user_id"
+             , a.update_dt          as "grp_update_dt"
+             , b.com_cd
+             , b.com_cd_name
+             , b.expl
+             , b.use_yn
+             , b.create_user_id
+             , b.create_dt
+             , b.update_user_id
+             , b.update_dt
+          from daily.com_com_grp_cd a
+            left outer join daily.com_com_cd b on a.com_grp_cd = b.com_grp_cd
+         where 1=1
+           and a.use_yn = 'Y'
+           and b.use_yn = 'Y'
+         order by a.com_grp_cd desc
+    </select>
 </mapper>

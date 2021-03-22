@@ -29,6 +29,7 @@ import kotlin.collections.ArrayList
 /**
  * 2021.01.11 | gomip | created
  * => codegen을 한 이후에 api 함수명 변경해주는 코드
+ * 2021.03.22 | gomip | swagger authorization 추가
  */
 @Configuration
 @EnableSwagger2

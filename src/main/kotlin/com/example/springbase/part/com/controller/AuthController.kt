@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.*
 import org.springframework.web.servlet.view.RedirectView
 import java.net.URLEncoder
 
+/**
+ * 2021.03.18 | gomip | created
+ * 2021.03.19 | gomip | verify Token 작
+ */
 @RestController
 @RequestMapping("/auth")
 @Api(description = "인증(로그인)")
@@ -44,7 +48,6 @@ class AuthController : BaseController(){
 
     @GetMapping("/verify")
     fun verifyToken(token: String): String{
-        log.debug("im here")
         return if (serviceAuth.isValidToken(token)) {
             "Y"
         } else {

@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.ApplicationContext
 import org.springframework.core.env.Environment
 import org.springframework.stereotype.Component
+import org.springframework.util.StringUtils
 import org.springframework.web.context.request.RequestContextHolder
 import org.springframework.web.context.request.ServletRequestAttributes
 import java.net.InetAddress
@@ -72,6 +73,8 @@ class ControllerAdvice {
         setAuth(req)                                                                                // 토큰 인증처리
         // Main --------------------------------------------------------------------------------------------------------
         try {
+            validPermission()
+
             log.info("  session ID : ${request.session.id}")
             log.info("   client IP : ${request.getHeader("real-ip")}")
             log.info("         GID : ${UUID.randomUUID()}")
@@ -99,6 +102,12 @@ class ControllerAdvice {
         return returnVal
     }
 
+    private fun validPermission(){
+        if (commons.area.user == null || StringUtils.isEmpty(commons.area.user!!.jwt)) {
+            log.error("not authorized")
+//            throw Exception("not authorized")
+        }
+    }
     /**
      * common area 중 한번만 셋팅하면 되는 변수들 처리
      */
@@ -175,6 +184,7 @@ class ControllerAdvice {
         commons.area.user = user
         user.sessId = req.session.id
 
+        log.debug("user : $commons")
         return jwt
     }
 }
