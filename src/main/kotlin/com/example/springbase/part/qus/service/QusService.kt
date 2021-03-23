@@ -84,7 +84,7 @@ class QusService : BaseService(){
         input.createDt = createDt
         val res = mapper.insertSol(input)
         mapper.insertQusSolRel(res, input.qusId, userId, createDt)                                  // 문제 정답 관계 연결
-        return mapper.selectAnsOne(res)
+        return mapper.selectSolOne(res)
     }
 
     // 정답 조회

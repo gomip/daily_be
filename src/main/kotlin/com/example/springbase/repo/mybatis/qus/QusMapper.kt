@@ -17,7 +17,7 @@ interface QusMapper {
     fun selectQusPaging(input: GetQusIn, difCdList: List<String>, tagCdList: List<String>) : Page<GetQusOut>    // 문제 조회
     fun selectQusOne(qusId: String) : GetQusOut                                                     // 문제 단건 조회
     fun isExistQus(qusId: String) : Boolean                                                         // 문제 존재여부 확인
-    fun selectAnsOne(solId: String) : GetSolOut                                                     // 정답 단건 조회
+    fun selectSolOne(solId: String) : GetSolOut                                                     // 정답 단건 조회
     fun selectSolAll(qusId: String) : List<GetSolOut>                                               // 정답 전체 조회
     /* =============================================================================================
         등록

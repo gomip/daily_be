@@ -66,8 +66,8 @@
          limit 1
     </select>
 
-    <select id="selectAnsOne" resultType="GetSolOut">
-        select /* selectAnsOne @ qus @ 정답 단건 조회 */
+    <select id="selectSolOne" resultType="GetSolOut">
+        select /* selectSolOne @ qus @ 정답 단건 조회 */
                sol_id
              , lang_cd
              , daily.getcdname('LANG_CD', lang_cd) as "langCdName"
