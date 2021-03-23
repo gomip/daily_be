@@ -176,7 +176,6 @@ class ControllerAdvice {
      */
     private fun setAuth(req: HttpServletRequest): String {
         val jwt = req.getHeader("authorization")?: return ""
-        log.debug("jwt : $jwt")
         var referrer = req.getHeader("referer")
 
         val user = serviceAuth.decodeToken(jwt) ?: return ""
@@ -184,7 +183,6 @@ class ControllerAdvice {
         commons.area.user = user
         user.sessId = req.session.id
 
-        log.debug("user : $commons")
         return jwt
     }
 }

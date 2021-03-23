@@ -92,12 +92,6 @@ class AuthService(
 
             val credential = googleAuthFlow().createAndStoreCredential(tokenResponse, null)
             val requestFactory = httpTransport.createRequestFactory(credential)
-//            val url = GenericUrl(commons.oauthGoogleConstants.userInfoEndpoint)
-//            val request = requestFactory.buildGetRequest(url)
-//            request.headers.contentType = "application/json"
-//            val jsonString = request.execute().parseAsString()
-//            log.debug("8")
-//            val json = JSONObject(jsonString)
             val decoder : java.util.Base64.Decoder = java.util.Base64.getUrlDecoder()
             val parts=
                 tokenResponse.idToken.split(".") // split out the "parts" (header, payload and signature)
@@ -187,9 +181,7 @@ class AuthService(
     fun isValidToken(jwt: String) : Boolean{
         return try{
             if (jwt == null) return false
-            log.debug("jwt : $jwt")
             verifier.verify(removeBearerSignature(jwt))
-            log.debug("jwt : ${verifier.verify(removeBearerSignature(jwt))}")
             true
         } catch (e: JWTDecodeException) {
             false
