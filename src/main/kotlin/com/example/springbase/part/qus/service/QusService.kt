@@ -66,7 +66,7 @@ class QusService : BaseService(){
     }
 
     // 정답 등록
-    fun insertAns(input: PostSolIn) : GetSolOut {
+    fun insertSol(input: PostSolIn) : GetSolOut {
         // Init ------------------------------------------------------------------------------------
         val userId = commons.area.user?.userId
         val createDt = DateUtils.currentTimeStamp()
@@ -82,18 +82,18 @@ class QusService : BaseService(){
         // Main ------------------------------------------------------------------------------------
         input.createUserId = userId
         input.createDt = createDt
-        val res = mapper.insertAns(input)
+        val res = mapper.insertSol(input)
         mapper.insertQusSolRel(res, input.qusId, userId, createDt)                                  // 문제 정답 관계 연결
         return mapper.selectAnsOne(res)
     }
 
     // 정답 조회
-    fun selectAns(qusId: String) : List<GetSolOut> {
+    fun selectSol(qusId: String) : List<GetSolOut> {
         // Validation ------------------------------------------------------------------------------
         // valid 1. 문제 존재 여부 확인
         if (!mapper.isExistQus(qusId)) log.error("해당 문제는 존재하지 않습니다.")
 
         // Main ------------------------------------------------------------------------------------
-        return mapper.selectAnsAll(qusId)
+        return mapper.selectSolAll(qusId)
     }
 }

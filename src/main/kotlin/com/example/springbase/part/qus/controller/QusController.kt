@@ -30,15 +30,15 @@ class QusController : BaseController(){
         return service.insertQus(input)
     }
 
-    @PostMapping("/ans")
+    @PostMapping("/sol")
     @ApiOperation("정답 등록")
-    fun postAns(@RequestBody input: PostSolIn): GetSolOut {
-        return service.insertAns(input)
+    fun postSol(@RequestBody input: PostSolIn): GetSolOut {
+        return service.insertSol(input)
     }
 
     @GetMapping("/{qusId}")
     @ApiOperation("정답 조회")
-    fun getAns(@PathVariable qusId: String): List<GetSolOut> {
-        return service.selectAns(qusId)
+    fun getSol(@PathVariable qusId: String): List<GetSolOut> {
+        return service.selectSol(qusId)
     }
 }

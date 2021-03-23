@@ -81,8 +81,8 @@
            and sol_id = #{solId}
     </select>
 
-    <select id="selectAnsAll" resultType="GetSolOut">
-        select /* selectAnsAll @ qus @ 정답 조회 */
+    <select id="selectSolAll" resultType="GetSolOut">
+        select /* selectSolAll @ qus @ 정답 조회 */
                a.sol_id
              , a.lang_cd
              , daily.getcdname('LANG_CD', a.lang_cd) as "lang_cd_name"
@@ -126,8 +126,8 @@
                 returning qus_id
     </select>
 
-    <select id="insertAns" resultType="string">
-        insert /* insertAns @ qus @ 정답 등록 */
+    <select id="insertSol" resultType="string">
+        insert /* insertSol @ qus @ 정답 등록 */
           into daily.qus_sol_mst(
                                  lang_cd,
                                  ans_ctn,
