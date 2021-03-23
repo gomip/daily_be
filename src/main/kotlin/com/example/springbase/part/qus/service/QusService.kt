@@ -76,7 +76,7 @@ class QusService : BaseService(){
         // valid 2. 언어 코드 확인
         if (input.langCd == "") log.error("언어가 지정되지 않았습니다.")
         // valid 3. 내용이 적혀 있는지 확인
-        if (input.ansCtn == "") log.error("정답이 입력되지 않았습니다.")
+        if (input.solCtn == "") log.error("정답이 입력되지 않았습니다.")
         // valid 4. 해당 문제가 존재하는지 확인
         if (!mapper.isExistQus(input.qusId)) log.error("해당 문제는 존재하지 않습니다.")
         // Main ------------------------------------------------------------------------------------

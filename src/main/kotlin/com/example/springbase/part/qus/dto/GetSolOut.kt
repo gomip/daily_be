@@ -6,7 +6,7 @@ data class GetSolOut (
     var solId: String = "",
     var langCd: String = "",
     var langCdName: String = "",
-    var ansCtn: String = "",
+    var solCtn: String = "",
     val createUserName: String? = null,
     val createDt: OffsetDateTime? = null,
     val updateUserName: String? = null,

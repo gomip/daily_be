@@ -71,7 +71,7 @@
                sol_id
              , lang_cd
              , daily.getcdname('LANG_CD', lang_cd) as "langCdName"
-             , ans_ctn
+             , sol_ctn
              , daily.getusername(create_user_id) as "createUserName"
              , update_dt
              , daily.getusername(update_user_id) as "updateUserName"
@@ -86,7 +86,7 @@
                a.sol_id
              , a.lang_cd
              , daily.getcdname('LANG_CD', a.lang_cd) as "lang_cd_name"
-             , a.ans_ctn
+             , a.sol_ctn
              , daily.getusername(a.create_user_id) as "createUserName"
              , a.update_dt
              , daily.getusername(a.update_user_id) as "updateUserName"
@@ -130,13 +130,13 @@
         insert /* insertSol @ qus @ 정답 등록 */
           into daily.qus_sol_mst(
                                  lang_cd,
-                                 ans_ctn,
+                                 sol_ctn,
                                  create_user_id,
                                  create_dt
                                  )
         values (
                 #{langCd},
-                #{ansCtn},
+                #{solCtn},
                 #{createUserId},
                 #{createDt}
                )
