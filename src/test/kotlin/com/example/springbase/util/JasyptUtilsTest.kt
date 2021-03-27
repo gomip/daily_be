@@ -19,9 +19,5 @@ class JasyptUtilsTest {
 
     @Test
     fun decryptTest(){
-        val id = JasyptUtils.decrypt("2sO1zeHHwOuoHctKsEOHdjwXuUKbQbaPgAo6MyZY72IZ2xXxtoFVbAoHTHKPkvqoUDqqvAmpKeorgfdF/V5EKKrTJLwQWEOb8NSZpQ6nsFuhkNGywpIcAA==")
-        val pw = JasyptUtils.decrypt("vG92cfmLgg/L4xCPQabburJcEpoenyNydskCRNuMnFvlDY/p2ZKPDw==")
-        println("id : $id")
-        println("pw : $pw")
     }
 }

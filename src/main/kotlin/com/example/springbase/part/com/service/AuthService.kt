@@ -131,7 +131,7 @@ class AuthService(
 
             val jwt = JWT.create()
                 .withIssuer("gomip-dev")
-                .withClaim("email", comUserMix.email)
+//                .withClaim("email", comUserMix.email)
                 .withClaim("userId", comUserMix.userId)
                 .withIssuedAt(DateUtils.nowDate())
                 .withExpiresAt(DateUtils.fromLocalDateTimeToDate(DateUtils.now().plusDays(2)))

@@ -19,7 +19,7 @@ class HomeController : BaseController(){
         mv.viewName = "index"
 
         val appName = "Daily"
-        val redirectUri = "http://localhost:3001/login"
+        val redirectUri = "http://localhost:3001/dashboard"
 
         return RedirectView("/web/sign-in?redirect_uri=$redirectUri&app_name=$appName")
     }
