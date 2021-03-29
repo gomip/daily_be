@@ -127,7 +127,6 @@ class AuthService(
             if (comUserMix == null) {
                 throw Exception("사용자가 존재하지 않습니다.")
             }
-            comUserMix = comUserMix!!
 
             val jwt = JWT.create()
                 .withIssuer("gomip-dev")
@@ -206,11 +205,11 @@ class AuthService(
             return null
         val decoded = verifier.verify(removeBearerSignature(jwt))
         val userId = decoded.getClaim("userId").asString()
-        val email = decoded.getClaim("email").asString()
+//        val email = decoded.getClaim("email").asString()
 
         return ComUser(
             userId = userId,
-            email = email,
+//            email = email,
             jwt = jwt
         )
     }
