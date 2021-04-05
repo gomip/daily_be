@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.springbase.repo.mybatis.com.DashboardMapper">
+    <select id="selectRecentQus" resultType="GetQusOut">
+        select /* selectRecentQus @ dashboard @ 최근에 등록된 문제 3개 조회 */
+            qus_id
+             , qus_title
+             , qus_ctn
+             , dif_cd
+             , daily.getcdname('DIF_CD', dif_cd) as "difCdName"
+             , tag_cd
+             , daily.getcdname('TAG_CD', tag_cd) as "tagCdName"
+             , use_yn
+             , daily.getusername(create_user_id) as "createUserName"
+             , update_dt
+             , daily.getusername(update_user_id) as "updateUserName"
+             , update_dt
+          from daily.qus_qus_mst
+         where 1=1
+           and use_yn = 'Y'
+         order by create_dt desc
+         limit 3
+    </select>
+
+    <select id="selectRecentSol" resultType="GetSolOut">
+        select /* selectRecentSol @ dashboard @ 최근에 등록된 답안 5개 조회 */
+               sol_id
+             , lang_cd
+             , daily.getcdname('LANG_CD', lang_cd) as "langCdName"
+             , sol_ctn
+             , daily.getusername(create_user_id) as "createUserName"
+             , update_dt
+             , daily.getusername(update_user_id) as "updateUserName"
+             , update_dt
+          from daily.qus_sol_mst
+         where 1=1
+           and use_yn = 'Y'
+         order by create_dt desc
+         limit 5
+    </select>
+</mapper>

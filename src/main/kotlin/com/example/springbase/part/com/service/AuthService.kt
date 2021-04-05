@@ -133,7 +133,7 @@ class AuthService(
 //                .withClaim("email", comUserMix.email)
                 .withClaim("userId", comUserMix.userId)
                 .withIssuedAt(DateUtils.nowDate())
-                .withExpiresAt(DateUtils.fromLocalDateTimeToDate(DateUtils.now().plusDays(2)))
+                .withExpiresAt(DateUtils.fromLocalDateTimeToDate(DateUtils.now().plusDays(1)))
                 .sign(algorithm)
             comUserMix.jwt = jwt
 
